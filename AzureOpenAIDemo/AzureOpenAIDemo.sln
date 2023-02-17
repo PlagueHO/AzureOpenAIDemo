@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureOpenAIDemo.BlazorWeb.Server", "AzureOpenAIDemo.BlazorWeb\Server\AzureOpenAIDemo.BlazorWeb.Server.csproj", "{A301B9DC-1B20-44B5-98B6-0811043B6746}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureOpenAIDemo.BlazorWeb.Client", "AzureOpenAIDemo.BlazorWeb\Client\AzureOpenAIDemo.BlazorWeb.Client.csproj", "{27CD277D-6C57-4168-836B-BECEB106B7EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureOpenAIDemo.BlazorWeb.Shared", "AzureOpenAIDemo.BlazorWeb\Shared\AzureOpenAIDemo.BlazorWeb.Shared.csproj", "{AF6453BE-FACD-4165-BA59-1318C10AADB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A301B9DC-1B20-44B5-98B6-0811043B6746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A301B9DC-1B20-44B5-98B6-0811043B6746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A301B9DC-1B20-44B5-98B6-0811043B6746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A301B9DC-1B20-44B5-98B6-0811043B6746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CD277D-6C57-4168-836B-BECEB106B7EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CD277D-6C57-4168-836B-BECEB106B7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CD277D-6C57-4168-836B-BECEB106B7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CD277D-6C57-4168-836B-BECEB106B7EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF6453BE-FACD-4165-BA59-1318C10AADB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF6453BE-FACD-4165-BA59-1318C10AADB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF6453BE-FACD-4165-BA59-1318C10AADB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6453BE-FACD-4165-BA59-1318C10AADB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21575F2F-32DE-494F-BFF4-841982233F6A}
+	EndGlobalSection
+EndGlobal
