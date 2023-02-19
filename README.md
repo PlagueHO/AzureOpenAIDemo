@@ -21,7 +21,7 @@ The following GitHub Actions variables should be configured in the repository to
 Your variables should look similar to this:
 ![Example of GitHub Variables](/images/github-actions-variables.png)
 
-The following GitHub Secrets need to be defined to ensure that resource names for Storage Account and Web App DNS are globally unique and provide access to your Azure subscription for deployment:
+The following GitHub Secrets need to be defined to enable the workflow identity federation to authenticate to Azure:
 
 - `AZURE_CLIENT_ID`: The Application (Client) ID of the Service Principal used to authenticate to Azure. This is generated as part of configuring Workload Identity Federation.
 - `AZURE_TENANT_ID`: The Tenant ID of the Service Principal used to authenticate to Azure.
