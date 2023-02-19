@@ -9,12 +9,16 @@ resource webApp 'Microsoft.Web/sites@2021-01-15' = {
   name: webAppName
   location: location
   kind: 'app,linux'
+  identity: {
+    type: 'SystemAssigned'
+  }
   properties: {
     serverFarmId: appServicePlanId
     httpsOnly: true
     siteConfig: {
       numberOfWorkers: 1
       linuxFxVersion: 'DOTNETCORE|7.0'
+      healthCheckPath: '/'
       appSettings: [
         {
           name: 'APPINSIGHTS_INSTRUMENTATIONKEY'
@@ -85,12 +89,16 @@ resource WebAppStaging 'Microsoft.Web/sites/slots@2022-03-01' = {
   parent: webApp
   location: location
   kind: 'app,linux'
+  identity: {
+    type: 'SystemAssigned'
+  }
   properties: {
     serverFarmId: appServicePlanId
     httpsOnly: true
     siteConfig: {
       numberOfWorkers: 1
       linuxFxVersion: 'DOTNETCORE|7.0'
+      healthCheckPath: '/'
       appSettings: [
         {
           name: 'APPINSIGHTS_INSTRUMENTATIONKEY'
