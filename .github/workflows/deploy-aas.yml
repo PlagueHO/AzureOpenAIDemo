@@ -42,7 +42,7 @@ jobs:
         with:
           failOnStdErr: false
           resourceGroupName: ${{ inputs.resourceGroupName }}
-          template: ./deploy/bicep.bicep
+          template: ./bicep/main.bicep
           region: ${{ inputs.LOCATION }}
           scope: subscription
           parameters: >

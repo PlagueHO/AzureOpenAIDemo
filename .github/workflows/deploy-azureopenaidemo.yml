@@ -19,6 +19,7 @@ jobs:
 
   deploy-aas:
     if: vars.Type == 'AAS'
+    needs: build-blazorserver
     uses: ./.github/workflows/deploy-aas.yml
     with:
       LOCATION: ${{ vars.LOCATION }}
