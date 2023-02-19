@@ -59,6 +59,8 @@ jobs:
     outputs:
       webAppName: ${{ steps.deploy.outputs.webAppName }}
       webAppHostName: ${{ steps.deploy.outputs.webAppHostName }}
+      webAppStagingName: ${{ steps.deploy.outputs.webAppStagingName }}
+      webAppStagingHostName: ${{ steps.deploy.outputs.webAppStagingHostName }}
       openAiServiceEndpoint: ${{ steps.deploy.outputs.openAiServiceEndpoint }}
       openAiServiceDeployment: ${{ steps.deploy.outputs.openAiServiceDeployment }}
 
@@ -108,5 +110,15 @@ jobs:
       - name: Deploy website
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ needs.deploy.outputs.webAppName }}
+          app-name: ${{ needs.deploy.outputs.WebAppName }}
           package: blazorserverwebsite/blazorserverpublish.zip
+          slot-name: 'staging'
+
+      - name: Swap staging slot
+        uses: azure/CLI@v1
+        with:
+          inlineScript:
+            az webapp deployment slot auto-swap \
+            --name ${{ needs.deploy.outputs.WebAppName }} \
+            --resource-group ${{ inputs.RESOURCE_GROUP_NAME }} \
+            --slot staging

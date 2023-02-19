@@ -113,5 +113,7 @@ module webAppBlazor './modules/webAppBlazor.bicep' = {
 
 output webAppName string = webAppBlazor.outputs.webAppName
 output webAppHostName  string = webAppBlazor.outputs.webAppHostName
+output webAppStagingName string = webAppBlazor.outputs.webAppStagingName
+output webAppStagingHostName  string = webAppBlazor.outputs.webAppStagingHostName
 output openAiServiceEndpoint string = openAiService.outputs.openAiServiceEndpoint
 output openAiServiceDeployment string = openAiService.outputs.openAiServiceDeployment
