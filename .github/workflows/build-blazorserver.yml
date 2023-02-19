@@ -23,10 +23,10 @@ jobs:
     - name: Zip publishable blazor server
       run: |
         zip -r blazorserverpublish.zip .
-      working-directory: ./src/AzureOpenAIBlazorServer/bin/Release/net7/publish
+      working-directory: ./src/AzureOpenAIBlazorServer/bin/Release/net7.0/publish
 
     - name: Upload blazorserver as workflow artifact
       uses: actions/upload-artifact@v3
       with:
         name: blazorserverwebsite
-        path: ./src/AzureOpenAIBlazorServer/bin/Release/net7/publish/blazorserverpublish.zip
+        path: ./src/AzureOpenAIBlazorServer/bin/Release/net7.0/publish/blazorserverpublish.zip
