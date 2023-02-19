@@ -118,7 +118,7 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript:
-            az webapp deployment slot auto-swap \
+            az webapp deployment slot swap \
             --name ${{ needs.deploy.outputs.WebAppName }} \
             --resource-group ${{ inputs.RESOURCE_GROUP_NAME }} \
             --slot staging
