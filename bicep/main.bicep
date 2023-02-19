@@ -21,6 +21,36 @@ param baseResourceName string
 ])
 param appServicePlanConfiguration string = 'P1V2'
 
+@description('The model to deploy to the Open AI service.')
+@allowed([
+  'code-custman-001'
+  'code-search-ada-code-001'
+  'code-search-ada-text-001'
+  'code-search-babbage-code-001'
+  'code-search-babbage-text-001'
+  'text-ada-001'
+  'text-babbage-001'
+  'text-curie-001'
+  'text-davinci-001'
+  'text-davinci-002'
+  'text-embedding-ada-002'
+  'text-search-ada-doc-001'
+  'text-search-ada-query-001'
+  'text-search-babbage-doc-001'
+  'text-search-babbage-query-001'
+  'text-search-curie-doc-001'
+  'text-search-curie-query-001'
+  'text-search-davinci-doc-001'
+  'text-search-davinci-query-001'
+  'text-similarity-ada-001'
+  'text-similarity-babbage-001'
+  'text-similarity-curie-001'
+])
+param openAiModelName string = 'text-davinci-002'
+
+@description('The name of the deployment for the model  in the Open AI service.')
+param openAiDeploymentlName string = 'text-davinci-002'
+
 resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   name: resourceGroupName
   location: location
@@ -32,6 +62,8 @@ module openAiService './modules/openAiService.bicep' = {
   params: {
     location: location
     openAiServiceName: '${baseResourceName}-openai'
+    modelName: openAiModelName
+    deploymentName: openAiDeploymentlName
   }
 }
 

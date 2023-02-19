@@ -1,7 +1,7 @@
 param location string
 param openAiServiceName string
-param deploymentName string = 'text-davinci-002'
-param modelName string = 'text-davinci-002'
+param deploymentName string
+param modelName string
 
 resource openAiService 'Microsoft.CognitiveServices/accounts@2022-12-01' = {
   name: openAiServiceName
