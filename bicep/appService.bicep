@@ -36,7 +36,7 @@ module appServicePlan './modules/appServicePlan.bicep' = {
   }
 }
 
-module webAppBlazor './modules/WebAppBlazor.bicep' = {
+module webAppBlazor './modules/webAppBlazor.bicep' = {
   name: 'webAppBlazor'
   scope: rg
   dependsOn: [
