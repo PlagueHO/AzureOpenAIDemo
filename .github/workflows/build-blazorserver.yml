@@ -1,0 +1,32 @@
+name: build-blazorserver
+
+on:
+  workflow_call:
+
+jobs:
+  build-application:
+    name: Build Blazor server
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7
+
+    - name: Build publishable blazor server
+      run: |
+        dotnet publish --configuration Release
+      working-directory: ./src/AzureOpenAIBlazorServer/
+
+    - name: Zip publishable blazor server
+      run: |
+        zip -r blazorserverpublish.zip .
+      working-directory: ./src/AzureOpenAIBlazorServer/bin/Release/net7/publish
+
+    - name: Upload blazorserver as workflow artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: blazorserverwebsite
+        path: ./src/AzureOpenAIBlazorServer/bin/Release/net7/publish/blazorserverpublish.zip

@@ -1,0 +1,15 @@
+name: lint-aas-bicep
+
+on:
+  workflow_call:
+
+jobs:
+  lint:
+    name: Lint AzureAppService Bicep
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Lint code
+      run: |
+        az bicep build --file bicep/appService.bicep

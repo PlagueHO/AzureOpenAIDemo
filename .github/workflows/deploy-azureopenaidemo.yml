@@ -11,6 +11,12 @@ permissions:
   contents: read
 
 jobs:
+  lint-aas-bicep:
+    uses: ./.github/workflows/lint-aas-bicep.yml
+
+  build-blazorserver:
+    uses: ./.github/workflows/build-blazorserver.yml
+
   deploy-aas:
     if: vars.Type == 'AAS'
     uses: ./.github/workflows/deploy-aas.yml
