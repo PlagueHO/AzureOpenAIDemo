@@ -15,6 +15,7 @@ resource openAiService 'Microsoft.CognitiveServices/accounts@2022-12-01' = {
   }
   properties: {
     publicNetworkAccess: 'Enabled'
+    restore: true
   }
 }
 
