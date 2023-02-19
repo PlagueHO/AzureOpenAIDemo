@@ -69,6 +69,9 @@ module monitoring './modules/monitoring.bicep' = {
 module openAiService './modules/openAiService.bicep' = {
   name: 'openAiService'
   scope: rg
+  dependsOn: [
+    monitoring
+  ]
   params: {
     location: location
     openAiServiceName: '${baseResourceName}-openai'
@@ -82,6 +85,7 @@ module appServicePlan './modules/appServicePlan.bicep' = {
   scope: rg
   dependsOn: [
     openAiService
+    monitoring
   ]
   params: {
     location: location
@@ -95,6 +99,7 @@ module webAppBlazor './modules/webAppBlazor.bicep' = {
   scope: rg
   dependsOn: [
     appServicePlan
+    monitoring
   ]
   params: {
     location: location
