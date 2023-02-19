@@ -1,6 +1,7 @@
 param location string
 param appServicePlanId string
 param webAppName string
+param openAiEndpoint string
 
 resource webApp 'Microsoft.Web/sites@2021-01-15' = {
   name: webAppName
@@ -12,7 +13,12 @@ resource webApp 'Microsoft.Web/sites@2021-01-15' = {
     siteConfig: {
       numberOfWorkers: 1
       linuxFxVersion: 'DOTNETCORE|7.0'
-      appSettings: []
+      appSettings: [
+        {
+          name: 'OPENAI_ENDPOINT'
+          value: openAiEndpoint
+        }
+      ]
     }
     clientAffinityEnabled: true
   }
@@ -37,7 +43,12 @@ resource webApp 'Microsoft.Web/sites@2021-01-15' = {
       siteConfig: {
         numberOfWorkers: 1
         linuxFxVersion: 'DOTNETCORE|7.0'
-        appSettings: []
+        appSettings: [
+          {
+            name: 'OPENAI_ENDPOINT'
+            value: openAiEndpoint
+          }
+        ]
       }
       clientAffinityEnabled: true
     }
@@ -54,6 +65,6 @@ resource webApp 'Microsoft.Web/sites@2021-01-15' = {
   }
 }
 
-
-output url string = 'https://${webAppName}.azurewebsites.net'
+output webAppName string = webApp.name
+output webAppHostName  string = webApp.properties.defaultHostName
 

@@ -24,13 +24,44 @@ on:
         required: true
 
 jobs:
-  deploy-azure-resources:
+  validate:
+    name: Validate Azure resources
     runs-on: ubuntu-latest
-    name: Create Azure Resources
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+      - name: Run what-if
+        uses: azure/arm-deploy@v1
+        with:
+          failOnStdErr: false
+          resourceGroupName: ${{ inputs.resourceGroupName }}
+          template: ./deploy/main.bicep
+          parameters: >
+            environmentType=${{ inputs.environmentType }}
+            reviewApiUrl=${{ inputs.reviewApiUrl }}
+            reviewApiKey=${{ secrets.reviewApiKey }}
+          additionalArguments: --what-if
+
+  deploy-azure-resources:
+    name: Create Azure resources
+    runs-on: ubuntu-latest
+    needs: validate
+    outputs:
+      webAppName: ${{ steps.deploy.outputs.webAppName }}
+      webAppHostName: ${{ steps.deploy.outputs.webAppHostName }}
+      openAiServiceEndpoint: ${{ steps.deploy.outputs.openAiServiceEndpoint }}
+      openAiServiceDeployment: ${{ steps.deploy.outputs.openAiServiceDeployment }}
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Azure Login
         uses: azure/login@v1
@@ -39,7 +70,7 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
 
-      - name: Deploy to Azure App Service
+      - name: Deploy Azure resources
         uses: azure/arm-deploy@v1
         with:
           failOnStdErr: false
@@ -54,4 +85,24 @@ jobs:
             resourceGroupName=${{ inputs.RESOURCE_GROUP_NAME }}
             appServicePlanConfiguration=${{ inputs.APPSERVICEPLAN_CONFIGURATION }}
 
+  deploy-website:
+    name: Publish Blazor Server
+    needs: deploy-azure-resources
+    runs-on: ubuntu-latest
 
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+
+      - name: Deploy website
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ needs.deploy.outputs.webAppName }}
+          package: blazorserverwebsite/blazorserverpublish.zip

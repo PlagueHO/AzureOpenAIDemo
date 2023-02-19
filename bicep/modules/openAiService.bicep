@@ -1,5 +1,7 @@
 param location string
 param openAiServiceName string
+param deploymentName string = 'text-davinci-002'
+param modelName string = 'text-davinci-002'
 
 resource openAiService 'Microsoft.CognitiveServices/accounts@2022-12-01' = {
   name: openAiServiceName
@@ -16,13 +18,13 @@ resource openAiService 'Microsoft.CognitiveServices/accounts@2022-12-01' = {
   }
 }
 
-resource openAiServiceDavinciDeployment 'Microsoft.CognitiveServices/accounts/deployments@2022-12-01' = {
+resource openAiServiceDeployment 'Microsoft.CognitiveServices/accounts/deployments@2022-12-01' = {
   parent: openAiService
-  name: 'text-davinci-002'
+  name: deploymentName
   properties: {
     model: {
       format: 'OpenAI'
-      name: 'text-davinci-002'
+      name: modelName
       version: '1'
     }
     scaleSettings: {
@@ -30,3 +32,6 @@ resource openAiServiceDavinciDeployment 'Microsoft.CognitiveServices/accounts/de
     }
   }
 }
+
+output openAiServiceEndpoint string = openAiService.properties.endpoint
+output openAiServiceDeployment string = openAiServiceDeployment.properties.model.name

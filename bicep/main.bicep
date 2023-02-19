@@ -35,11 +35,12 @@ module openAiService './modules/openAiService.bicep' = {
   }
 }
 
-
-
 module appServicePlan './modules/appServicePlan.bicep' = {
   name: 'appServicePlan'
   scope: rg
+  dependsOn: [
+    openAiService
+  ]
   params: {
     location: location
     appServicePlanName: '${baseResourceName}-asp'
@@ -57,7 +58,11 @@ module webAppBlazor './modules/webAppBlazor.bicep' = {
     location: location
     appServicePlanId: appServicePlan.outputs.appServicePlanId
     webAppName: baseResourceName
+    openAiEndpoint: 'https://${openAiService.outputs.openAiServiceEndpoint}/openai/${openAiService.outputs.openAiServiceDeployment}'
   }
 }
 
-output url string = webAppBlazor.outputs.url
+output webAppName string = webAppBlazor.outputs.webAppName
+output webAppHostName  string = webAppBlazor.outputs.webAppHostName
+output openAiServiceEndpoint string = openAiService.outputs.openAiServiceEndpoint
+output openAiServiceDeployment string = openAiService.outputs.openAiServiceDeployment
