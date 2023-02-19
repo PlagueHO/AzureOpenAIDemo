@@ -90,7 +90,7 @@ jobs:
 
   publish:
     name: Publish Blazor Server
-    needs: deploy-azure-resources
+    needs: deploy
     runs-on: ubuntu-latest
 
     steps:

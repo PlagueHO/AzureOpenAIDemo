@@ -21,12 +21,48 @@ resource webApp 'Microsoft.Web/sites@2021-01-15' = {
           value: appInsightsInstrumentationKey
         }
         {
+          name: 'APPINSIGHTS_PROFILERFEATURE_VERSION'
+          value: '1.0.0'
+        }
+        {
+          name: 'APPINSIGHTS_SNAPSHOTFEATURE_VERSION'
+          value: '1.0.0'
+        }
+        {
           name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
           value: appInsightsConnectionString
         }
         {
+          name: 'ApplicationInsightsAgent_EXTENSION_VERSION'
+          value: '~2'
+        }
+        {
+          name: 'DiagnosticServices_EXTENSION_VERSION'
+          value: '~3'
+        }
+        {
+          name: 'InstrumentationEngine_EXTENSION_VERSION'
+          value: 'disabled'
+        }
+        {
+          name: 'SnapshotDebugger_EXTENSION_VERSION'
+          value: 'disabled'
+        }
+        {
           name: 'OPENAI_ENDPOINT'
           value: openAiEndpoint
+        }
+        {
+          name: 'XDT_MicrosoftApplicationInsights_BaseExtensions'
+          value: 'disabled'
+        }
+        {
+          name: 'XDT_MicrosoftApplicationInsights_Mode'
+          value: 'recommended'
+        }
+        {
+          name: 'XDT_MicrosoftApplicationInsights_PreemptSdk'
+          value: 'disabled'
         }
       ]
     }
@@ -59,12 +95,48 @@ resource webApp 'Microsoft.Web/sites@2021-01-15' = {
             value: appInsightsInstrumentationKey
           }
           {
+            name: 'APPINSIGHTS_PROFILERFEATURE_VERSION'
+            value: '1.0.0'
+          }
+          {
+            name: 'APPINSIGHTS_SNAPSHOTFEATURE_VERSION'
+            value: '1.0.0'
+          }
+          {
             name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
             value: appInsightsConnectionString
           }
           {
+            name: 'ApplicationInsightsAgent_EXTENSION_VERSION'
+            value: '~2'
+          }
+          {
+            name: 'DiagnosticServices_EXTENSION_VERSION'
+            value: '~3'
+          }
+          {
+            name: 'InstrumentationEngine_EXTENSION_VERSION'
+            value: 'disabled'
+          }
+          {
+            name: 'SnapshotDebugger_EXTENSION_VERSION'
+            value: 'disabled'
+          }
+          {
             name: 'OPENAI_ENDPOINT'
             value: openAiEndpoint
+          }
+          {
+            name: 'XDT_MicrosoftApplicationInsights_BaseExtensions'
+            value: 'disabled'
+          }
+          {
+            name: 'XDT_MicrosoftApplicationInsights_Mode'
+            value: 'recommended'
+          }
+          {
+            name: 'XDT_MicrosoftApplicationInsights_PreemptSdk'
+            value: 'disabled'
           }
         ]
       }

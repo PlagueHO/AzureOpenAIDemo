@@ -105,7 +105,7 @@ module webAppBlazor './modules/webAppBlazor.bicep' = {
     location: location
     appServicePlanId: appServicePlan.outputs.appServicePlanId
     webAppName: baseResourceName
-    openAiEndpoint: 'https://${openAiService.outputs.openAiServiceEndpoint}/openai/${openAiService.outputs.openAiServiceDeployment}'
+    openAiEndpoint: '${openAiService.outputs.openAiServiceEndpoint}openai/${openAiService.outputs.openAiServiceDeployment}/'
     appInsightsInstrumentationKey: monitoring.outputs.applicationInsightsInstrumentationKey
     appInsightsConnectionString: monitoring.outputs.applicationInsightsConnectionString
   }
