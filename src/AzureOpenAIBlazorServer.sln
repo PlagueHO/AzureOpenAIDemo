@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureOpenAIBlazorServer", "AzureOpenAIBlazorServer\AzureOpenAIBlazorServer.csproj", "{88E2F902-8C58-4C2E-8609-FDACA331D82B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureOpenAIBlazorServer", "AzureOpenAIBlazorServer\AzureOpenAIBlazorServer.csproj", "{88E2F902-8C58-4C2E-8609-FDACA331D82B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{277A8B63-16F6-4EAD-BD51-9DDCC939D924}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
