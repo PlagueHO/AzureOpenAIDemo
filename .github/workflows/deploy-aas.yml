@@ -107,5 +107,5 @@ jobs:
       - name: Deploy website
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ needs.deploy.outputs.webAppName }}
+          app-name: ${{ needs.deploy-azure-resources.outputs.webAppName }}
           package: blazorserverwebsite/blazorserverpublish.zip

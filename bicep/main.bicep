@@ -56,6 +56,16 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   location: location
 }
 
+module monitoring './modules/monitoring.bicep' = {
+  name: 'monitoring'
+  scope: rg
+  params: {
+    location: location
+    logAnalyticsWorkspaceName: '${baseResourceName}-law'
+    applicationInsightsName: '${baseResourceName}-ai'
+  }
+}
+
 module openAiService './modules/openAiService.bicep' = {
   name: 'openAiService'
   scope: rg
@@ -91,6 +101,8 @@ module webAppBlazor './modules/webAppBlazor.bicep' = {
     appServicePlanId: appServicePlan.outputs.appServicePlanId
     webAppName: baseResourceName
     openAiEndpoint: 'https://${openAiService.outputs.openAiServiceEndpoint}/openai/${openAiService.outputs.openAiServiceDeployment}'
+    appInsightsInstrumentationKey: monitoring.outputs.applicationInsightsInstrumentationKey
+    appInsightsConnectionString: monitoring.outputs.applicationInsightsConnectionString
   }
 }
 
