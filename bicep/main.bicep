@@ -26,6 +26,17 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   location: location
 }
 
+module openAiService './modules/openAiService.bicep' = {
+  name: 'openAiService'
+  scope: rg
+  params: {
+    location: location
+    openAiServiceName: '${baseResourceName}-openai'
+  }
+}
+
+
+
 module appServicePlan './modules/appServicePlan.bicep' = {
   name: 'appServicePlan'
   scope: rg
@@ -48,6 +59,5 @@ module webAppBlazor './modules/webAppBlazor.bicep' = {
     webAppName: baseResourceName
   }
 }
-
 
 output url string = webAppBlazor.outputs.url
