@@ -1,6 +1,13 @@
 targetScope = 'subscription'
 
+@description('The Azure App Service SKU for running the Blazor App.')
+@allowed([
+  'SouthCentralUS'
+  'WestEurope'
+])
 param location string = 'SouthCentralUS'
+
+@description('The name of the resource group that will contain all the resources.')
 param resourceGroupName string
 
 @description('The base name that will prefixed to all Azure resources deployed to ensure they are unique.')
