@@ -12,4 +12,4 @@ jobs:
 
     - name: Lint code
       run: |
-        az bicep build --file bicep/appService.bicep
+        az bicep build --file bicep/main.bicep
