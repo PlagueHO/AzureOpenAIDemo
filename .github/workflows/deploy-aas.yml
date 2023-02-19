@@ -49,6 +49,7 @@ jobs:
           region: ${{ inputs.LOCATION }}
           scope: subscription
           parameters: >
+            location=${{ inputs.LOCATION }}
             baseResourceName=${{ inputs.BASE_RESOURCE_NAME }}
             resourceGroupName=${{ inputs.RESOURCE_GROUP_NAME }}
             appServicePlanConfiguration=${{ inputs.APPSERVICEPLAN_CONFIGURATION }}
