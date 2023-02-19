@@ -19,7 +19,9 @@ jobs:
 
   deploy-aas:
     if: vars.Type == 'AAS'
-    needs: build-blazorserver
+    needs:
+      - lint-aas-bicep
+      - build-blazorserver
     uses: ./.github/workflows/deploy-aas.yml
     with:
       LOCATION: ${{ vars.LOCATION }}

@@ -157,4 +157,3 @@ resource webApp 'Microsoft.Web/sites@2021-01-15' = {
 
 output webAppName string = webApp.name
 output webAppHostName  string = webApp.properties.defaultHostName
-
