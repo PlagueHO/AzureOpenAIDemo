@@ -4,6 +4,10 @@
 
 Generate clinical/medical codes from clinical text documentation.
 
+- [Discharge summary](#discharge-summary)
+- [Operation note](#operation-note)
+- [Operation note generation with codes](#operation-note-generation-with-codes)
+
 ## Discharge summary
 
 Generate ICD-10 diagnosis codes from a discharge summary in JSON format and include the source of each code:
@@ -93,4 +97,10 @@ A semilunar subumbilical incision was made with a scalpel and dissection progres
 Upon initial examination, the abdomen findings were noted as above. Under direct visualization, two 5-mm ports were placed in suprapubic and right lower quadrant area. Using a combination of sharp and blunt dissection, the cecum and part of the ascending colon was mobilized so we could access the appendix. It was then dissected free from the cecum using sharp dissection. The mesoappendix was taken down with sharp dissection and looped with an Endoloop. The base of the appendix doubly looped with Endoloop and base of the appendix ligated, placed in the Endopouch and brought out through the umbilical incision.
 
 The base of the appendix was fulgurated to remove any remaining glands. The area was then irrigated with sterile saline and there was noted to be good hemostasis. No evidence of any bowel injury. The abdomen was desufflated. Ports were removed. Laparoscope was removed. The umbilical fascia was approximated with a figure-of-eight suture of 0 Vicryl and the skin was approximated with 4-0 Monocryl in subcuticular fashion. Steri-Strips were applied over the incision site. The patient tolerated the procedure well and was taken to postanesthesia care unit in stable condition. All packs, instruments, and needles were accounted for.
+```
+
+## Operation note generation with codes
+
+```text
+Generate an detailed operation note summary for a 44-year old female patient presenting with abdominal pain and undergoing a laparoscopic cholecystectomy and having no complications. The patient was discharged after 2 days. Include ICD-10 diagnsosis codes inline.
 ```

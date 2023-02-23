@@ -37,6 +37,14 @@ Classified category:
 ```text
 Classify the following security risk into 1 of the following categories: categories: [High, Medium, Low]
 
+Risk: We use Azure AD and our organization does not have multi-factor authentication enabled.
+
+Classified category:
+```
+
+```text
+Classify the following security risk into 1 of the following categories: categories: [High, Medium, Low]
+
 A message about a paying a ransom or my files will be deleted has appeared on my laptop.
 
 Classified category:
