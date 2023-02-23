@@ -5,12 +5,13 @@ Extract data from a support timeline summary of events to create a structured da
 ```text
 You must extract the following information from the customer support case timeline below:
 
-1. A short, yet detailed summary of the issue (key: issue)
+1. Issue title (key: issue_title)
 2. Cause of the issue (key: cause)
 4. Product (key: product)
 5. Order number (key: ordernumber)
 6. Case number (key: casenumber)
-7. The resolution of the issue, if any (key: resolution)
+7. A short, yet detailed summary of the issue (key: issue_summary)
+8. The resolution of the issue, if any (key: resolution)
 
 Make sure the fields 1 to 6 are answered very short, e.g., for location just say the location name. Please answer in JSON machine-readable format, using the keys from above. Format the output as a JSON object called "results". Pretty print the JSON and make sure that it is properly closed at the end.
 

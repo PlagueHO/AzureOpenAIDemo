@@ -38,3 +38,4 @@ This is a library of example prompts for the Azure OpenAI Service. The prompts a
 ### Media & Entertainment
 
 - [Article Summarization for Social Media](media/article-summarization-for-social-media.md)
+- [Extract Movie Name and Sentiment from Movie Review](media/movie-review-sentiment-classification.md)
