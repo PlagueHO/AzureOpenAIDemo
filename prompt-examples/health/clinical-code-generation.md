@@ -1,5 +1,7 @@
 # Clinical code generation
 
+> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002
+
 Generate clinical/medical codes from clinical text documentation.
 
 ## Discharge summary
