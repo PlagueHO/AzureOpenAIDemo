@@ -4,7 +4,7 @@ A set of demo applications for Azure OpenAI Service. These applications can be d
 
 ## Example prompts
 
-This repository contains a library of example prompts for various use cases and industries. See the [prompt examples](prompt-examples\README.md) for more information.
+This repository contains a library of example prompts for various use cases and industries. See the [prompt examples](prompt-examples/README.md) for more information.
 
 ## Demonstration applications
 

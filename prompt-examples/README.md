@@ -4,37 +4,37 @@ This is a library of example prompts for the Azure OpenAI Service. The prompts a
 
 ## Index by Use Case
 
-- [Security Risk Classification](/security/security-risk-classification.md)
-- [Article Summarization for Social Media](/media/article-summarization-for-social-media.md)
-- [Insurance Claim Conversation Extraction](/insurance/insurance-claim-conversation-extraction.md)
-- [Customer Service Response Generation](/customer-service/response-generation.md)
-- [Customer Service product issue timeline data extraction](/customer-service/data-extraction-from-support-timeline.md)
-- [Simple Code Generation](/code-generation/simple-code-generation.md)
-- [Health Clinical Code Generation](/health/clinical-code-generation.md)
+- [Security Risk Classification](security/security-risk-classification.md)
+- [Article Summarization for Social Media](media/article-summarization-for-social-media.md)
+- [Insurance Claim Conversation Extraction](insurance/insurance-claim-conversation-extraction.md)
+- [Customer Service Response Generation](customer-service/response-generation.md)
+- [Customer Service product issue timeline data extraction](customer-service/data-extraction-from-support-timeline.md)
+- [Simple Code Generation](code-generation/simple-code-generation.md)
+- [Health Clinical Code Generation](health/clinical-code-generation.md)
 
 ## Index by Industry
 
 ### Retail and Service
 
-- [Customer Service Response Generation](/customer-service/response-generation.md)
-- [Customer Service product issue timeline data extraction](/customer-service/data-extraction-from-support-timeline.md)
+- [Customer Service Response Generation](customer-service/response-generation.md)
+- [Customer Service product issue timeline data extraction](customer-service/data-extraction-from-support-timeline.md)
 
 ### Software
 
-- [Simple Code Generation](/code-generation/simple-code-generation.md)
+- [Simple Code Generation](code-generation/simple-code-generation.md)
 
 ### IT & Security
 
-- [Security Risk Classification](/security/security-risk-classification.md)
+- [Security Risk Classification](security/security-risk-classification.md)
 
 ### Health
 
-- [Health Clinical Code Generation](/health/clinical-code-generation.md)
+- [Health Clinical Code Generation](health/clinical-code-generation.md)
 
 ### Insurance
 
-- [Insurance Claim Conversation Extraction](/insurance/insurance-claim-conversation-extraction.md)
+- [Insurance Claim Conversation Extraction](insurance/insurance-claim-conversation-extraction.md)
 
 ### Media & Entertainment
 
-- [Article Summarization for Social Media](/media/article-summarization-for-social-media.md)
+- [Article Summarization for Social Media](media/article-summarization-for-social-media.md)
