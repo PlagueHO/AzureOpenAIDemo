@@ -2,7 +2,11 @@
 
 A set of demo applications for Azure OpenAI Service. These applications can be deployed to Azure using the included GitHub [workflow](.github\workflows\deploy-aas.yml), which will create the Azure resources using the Azure Bicep files found in the [bicep](bicep) folder.
 
-## Demonstrations
+## Example prompts
+
+This repository contains a library of example prompts for various use cases and industries. See the [prompt examples](prompt-examples\README.md) for more information.
+
+## Demonstration applications
 
 This repository contains the following demonstrations:
 
