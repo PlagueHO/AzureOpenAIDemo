@@ -102,14 +102,17 @@ The base of the appendix was fulgurated to remove any remaining glands. The area
 
 ## Radiology note code extraction
 
-Generate a JSON object with the following fields from a radiology note:
+> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, TEXT-DAVINCI-003
+> Recommended parameters: temperature=0.0, top_p=0.9
+
+Generate a JSON object with the following fields from a radiology note.
 
 ```text
 You must extract the following information from the radiology note below:
 
 1. Primary Indication (key: indication)
 2. Primary Indication ICD-10 code (key: indication_icd10)
-3. Array of Additional diagnosis ICD-10 codes from the finidings(key: additional_diagnosis_icd10)
+3. Array of Additional diagnosis ICD-10 codes from the findings (key: additional_diagnosis_icd10)
 4. A CPT code for the procedure (key: CPT)
 5. A short summary of findings (key: findings)
 6. A short, yet detailed summary of impression (key: impression)
@@ -117,20 +120,15 @@ You must extract the following information from the radiology note below:
 Make sure the fields 1 to 6 are answered very short, e.g., for location just say the location name. Please answer in JSON machine-readable format, using the keys from above. Format the output as a JSON object called "results". Pretty print the JSON and make sure that it is properly closed at the end.
 
 Radiology note:
-
 MRI BRAIN WITHOUT CONTRAST
 
 INDICATION: Headache
 
 TECHNIQUE: Multiplanar multisequence MR imaging of the brain was performed without contrast.
 
-FINDINGS:
+FINDINGS: The ventricles and sulci are normal in size and configuration. There is no midline shift or mass effect. There is no abnormal signal intensity within the brain parenchyma. There is indication of a hemorrhage in left frontal lobe. There is no other evidence of acute infarction, hemorrhage, hydrocephalus or extra-axial fluid collection. The pituitary gland, sella turcica and cavernous sinuses are unremarkable. The orbits, paranasal sinuses and mastoid air cells are clear.
 
-The ventricles and sulci are normal in size and configuration. There is no midline shift or mass effect. There is no abnormal signal intensity within the brain parenchyma. There is indication of a hemorrhage in left frontal lobe. There is no other evidence of acute infarction, hemorrhage, hydrocephalus or extra-axial fluid collection. The pituitary gland, sella turcica and cavernous sinuses are unremarkable. The orbits, paranasal sinuses and mastoid air cells are clear.
-
-IMPRESSION:
-
-Normal MRI of the brain without contrast.
+IMPRESSION: Normal MRI of the brain without contrast. Indication of a hemorrhage in left frontal lobe.
 ```
 
 ## Operation note generation with codes
