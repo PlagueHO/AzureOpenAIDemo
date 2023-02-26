@@ -1,14 +1,15 @@
-# Clinical code generation
+# Clinical code and documentation generation
 
-> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002
+> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, TEXT-DAVINCI-003
 
 Generate clinical/medical codes from clinical text documentation.
 
-- [Discharge summary](#discharge-summary)
-- [Operation note](#operation-note)
+- [Discharge summary code extraction](#discharge-summary-code-extraction)
+- [Operation note code extraction](#operation-note-code-extraction)
+- [Radiology note code extraction](#radiology-note-code-extraction)
 - [Operation note generation with codes](#operation-note-generation-with-codes)
 
-## Discharge summary
+## Discharge summary code extraction
 
 Generate ICD-10 diagnosis codes from a discharge summary in JSON format and include the source of each code:
 
@@ -56,11 +57,11 @@ General Surgeon
 02/23/2023
 ```
 
-## Operation note
+## Operation note code extraction
 
 > IMPORTANT: This scenario is currently blocked by the filters.
 
-Generate ICD-10 diagnosis codes from an operation node:
+Generate ICD-10 diagnosis codes from an operation note:
 
 ```text
 Generate the ICD-10 diagnosis codes for the following operation:
@@ -99,8 +100,43 @@ Upon initial examination, the abdomen findings were noted as above. Under direct
 The base of the appendix was fulgurated to remove any remaining glands. The area was then irrigated with sterile saline and there was noted to be good hemostasis. No evidence of any bowel injury. The abdomen was desufflated. Ports were removed. Laparoscope was removed. The umbilical fascia was approximated with a figure-of-eight suture of 0 Vicryl and the skin was approximated with 4-0 Monocryl in subcuticular fashion. Steri-Strips were applied over the incision site. The patient tolerated the procedure well and was taken to postanesthesia care unit in stable condition. All packs, instruments, and needles were accounted for.
 ```
 
-## Operation note generation with codes
+## Radiology note code extraction
+
+Generate a JSON object with the following fields from a radiology note:
 
 ```text
-Generate an detailed operation note summary for a 44-year old female patient presenting with abdominal pain and undergoing a laparoscopic cholecystectomy and having no complications. The patient was discharged after 2 days. Include ICD-10 diagnsosis codes inline.
+You must extract the following information from the radiology note below:
+
+1. Primary Indication (key: indication)
+2. Primary Indication ICD-10 code (key: indication_icd10)
+3. Array of Additional diagnosis ICD-10 codes from the finidings(key: additional_diagnosis_icd10)
+4. A CPT code for the procedure (key: CPT)
+5. A short summary of findings (key: findings)
+6. A short, yet detailed summary of impression (key: impression)
+
+Make sure the fields 1 to 6 are answered very short, e.g., for location just say the location name. Please answer in JSON machine-readable format, using the keys from above. Format the output as a JSON object called "results". Pretty print the JSON and make sure that it is properly closed at the end.
+
+Radiology note:
+
+MRI BRAIN WITHOUT CONTRAST
+
+INDICATION: Headache
+
+TECHNIQUE: Multiplanar multisequence MR imaging of the brain was performed without contrast.
+
+FINDINGS:
+
+The ventricles and sulci are normal in size and configuration. There is no midline shift or mass effect. There is no abnormal signal intensity within the brain parenchyma. There is indication of a hemorrhage in left frontal lobe. There is no other evidence of acute infarction, hemorrhage, hydrocephalus or extra-axial fluid collection. The pituitary gland, sella turcica and cavernous sinuses are unremarkable. The orbits, paranasal sinuses and mastoid air cells are clear.
+
+IMPRESSION:
+
+Normal MRI of the brain without contrast.
+```
+
+## Operation note generation with codes
+
+Generate a detailed operation note for a patient and include ICD-10 diagnosis codes inline.
+
+```text
+Generate an detailed operation note summary for a 44-year old female patient presenting with abdominal pain and undergoing a laparoscopic cholecystectomy and having no complications. The patient was discharged after 2 days. Include ICD-10 diagnosis codes inline.
 ```

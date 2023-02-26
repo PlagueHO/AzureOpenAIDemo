@@ -29,7 +29,7 @@ This is a library of example prompts for the Azure OpenAI Service. The prompts a
 
 ### Health
 
-- [Health Clinical Code Generation](health/clinical-code-generation.md)
+- [Health Clinical Code and Documentation Generation](health/clinical-code-and-documentation-generation.md)
 
 ### Insurance
 
