@@ -158,6 +158,29 @@ FINDINGS: The ventricles and sulci are normal in size and configuration. There i
 IMPRESSION: Normal MRI of the brain without contrast. Indication of a hemorrhage in left frontal lobe.
 ```
 
+## Create a referral letter
+
+Write a referral letter to a specialist for a patient.
+
+```text
+Write a referral to Dr. simon.kos@hospital.com asking to see this patient for review and management. Sx:CPOE and SOBOE 3 months. Typical
+PMHX:
+STEMI 2002. PCI LAD. HFREF
+CKD
+CVA
+AF on NOAC
+MEDS bicor, aspirin, statin, Rivaroxaban, entresto
+OE
+Well. High BMI. ECG NSR 80. BP 120/75
+well. Jvpne. Nil pedal edema
+HSDNM. Cheat clear
+Imp
+Stable.
+Plan
+Lifestyle. Diet.
+PHT clinic because why not
+```
+
 ## Operation note generation with codes
 
 Generate a detailed operation note for a patient and include ICD-10 diagnosis codes inline.
