@@ -11,6 +11,31 @@ Generate clinical/medical codes from clinical text documentation.
 
 ## Discharge summary code extraction
 
+> Recommended parameters: temperature=0.0, top_p=1.0
+
+Generate ICD-10 diagnosis codes from a discharge summary in JSON format:
+
+```text
+Generate ICD-10 diagnosis code from the following discharge summary. Please include both the code and the description and put them in JSON format:
+
+Patient name: John Smith
+Date of birth: 01/01/1990
+Hospital number: 123456
+Admission date: 02/22/2023
+Discharge date: 02/23/2023
+Reason for admission: Acute appendicitis
+Diagnosis: Acute appendicitis with perforation
+Procedure: Emergency laparoscopic appendectomy with drainage of peritoneal abscess
+Medications on discharge: Paracetamol 1 g four times daily, Amoxicillin-clavulanate 625 mg three times daily for seven days
+Follow-up instructions: Keep incisions clean and dry, avoid heavy lifting for four weeks, see GP in one week for wound check and removal of sutures, contact hospital if signs of infection or bleeding occur.
+Other information: Patient tolerated procedure well, no intraoperative complications, pathology confirmed acute suppurative appendicitis with perforation and abscess formation.
+
+Discharge summary prepared by:
+Dr. Jane Doe
+General Surgeon
+02/23/2023
+```
+
 Generate ICD-10 diagnosis codes from a discharge summary in JSON format and include the source of each code:
 
 ```text
@@ -26,7 +51,9 @@ Diagnosis: Acute appendicitis with perforation
 Procedure: Emergency laparoscopic appendectomy with drainage of peritoneal abscess
 Medications on discharge: Paracetamol 1 g four times daily, Amoxicillin-clavulanate 625 mg three times daily for seven days
 Follow-up instructions: Keep incisions clean and dry, avoid heavy lifting for four weeks, see GP in one week for wound check and removal of sutures, contact hospital if signs of infection or bleeding occur.
-Other information: Patient tolerated procedure well, no intraoperative complications, pathology confirmed acute suppurative appendicitis with perforation and abscess formation. The patient fell over in hospital and fractured thier pelvis. A chest X-ray was also performed.
+Other information: Patient tolerated procedure well, no intraoperative complications, pathology confirmed acute suppurative appendicitis with perforation and abscess formation.
+The patient fell over in hospital and fractured their pelvis.
+A chest X-ray was also performed because the patient reported chest pain and was having trouble breathing.
 
 Discharge summary prepared by:
 Dr. Jane Doe
