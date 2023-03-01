@@ -163,7 +163,7 @@ IMPRESSION: Normal MRI of the brain without contrast. Indication of a hemorrhage
 Write a referral letter to a specialist for a patient.
 
 ```text
-Write a referral to Dr. simon.kos@hospital.com asking to see this patient for review and management. Sx:CPOE and SOBOE 3 months. Typical
+Write a referral to Dr. simon.kos@hospital.com for 33 year old male asking to see this patient for review and management. Sx:CPOE and SOBOE 3 months. Typical
 PMHX:
 STEMI 2002. PCI LAD. HFREF
 CKD
