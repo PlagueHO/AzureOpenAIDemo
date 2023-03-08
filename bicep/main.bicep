@@ -40,6 +40,7 @@ param appServicePlanConfiguration string = 'P1V2'
   'text-curie-001'
   'text-davinci-001'
   'text-davinci-002'
+  'text-davinci-003'
   'text-embedding-ada-002'
   'text-search-ada-doc-001'
   'text-search-ada-query-001'
@@ -53,10 +54,10 @@ param appServicePlanConfiguration string = 'P1V2'
   'text-similarity-babbage-001'
   'text-similarity-curie-001'
 ])
-param openAiModelName string = 'text-davinci-002'
+param openAiModelName string = 'text-davinci-003'
 
 @description('The name of the deployment for the model  in the Open AI service.')
-param openAiDeploymentlName string = 'text-davinci-002'
+param openAiDeploymentlName string = 'text-davinci-003'
 
 resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   name: resourceGroupName
