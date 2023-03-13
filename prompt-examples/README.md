@@ -12,6 +12,8 @@ This is a library of example prompts for the Azure OpenAI Service. The prompts a
 - [Customer Service interview follow-up questions](customer-service/interview-followup.md)
 - [Simple Code Generation](code-generation/simple-code-generation.md)
 - [Health Clinical Code Generation](health/clinical-code-generation.md)
+- [Extract Name and Address from Email](extraction/extract-name-and-address-from-email.md)
+- [Extract Job Title from Sentence](extraction/extract-job-title-from-sentence.md)
 
 ## Index by Industry
 
