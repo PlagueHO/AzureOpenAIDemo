@@ -1,15 +1,15 @@
-# Clinical code and documentation generation
+# Clinical code generation
 
 > Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, TEXT-DAVINCI-003
 
 Generate clinical/medical codes from clinical text documentation.
 
-- [Discharge summary code extraction](#discharge-summary-code-extraction)
-- [Operation note code extraction](#operation-note-code-extraction)
-- [Radiology note code extraction](#radiology-note-code-extraction)
+- [Discharge summary code generation](#discharge-summary-code-generation)
+- [Operation note code generation](#operation-note-code-generation)
+- [Radiology note code generation](#radiology-note-code-generation)
 - [Operation note generation with codes](#operation-note-generation-with-codes)
 
-## Discharge summary code extraction
+## Discharge summary code generation
 
 > Recommended parameters: temperature=0.0, top_p=1.0
 
@@ -84,7 +84,7 @@ General Surgeon
 02/23/2023
 ```
 
-## Operation note code extraction
+## Operation note code generation
 
 > IMPORTANT: This scenario is currently blocked by the filters.
 
@@ -127,7 +127,7 @@ Upon initial examination, the abdomen findings were noted as above. Under direct
 The base of the appendix was fulgurated to remove any remaining glands. The area was then irrigated with sterile saline and there was noted to be good hemostasis. No evidence of any bowel injury. The abdomen was desufflated. Ports were removed. Laparoscope was removed. The umbilical fascia was approximated with a figure-of-eight suture of 0 Vicryl and the skin was approximated with 4-0 Monocryl in subcuticular fashion. Steri-Strips were applied over the incision site. The patient tolerated the procedure well and was taken to postanesthesia care unit in stable condition. All packs, instruments, and needles were accounted for.
 ```
 
-## Radiology note code extraction
+## Radiology note code generation
 
 > Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, TEXT-DAVINCI-003
 > Recommended parameters: temperature=0.0, top_p=0.9
@@ -156,35 +156,4 @@ TECHNIQUE: Multiplanar multisequence MR imaging of the brain was performed witho
 FINDINGS: The ventricles and sulci are normal in size and configuration. There is no midline shift or mass effect. There is no abnormal signal intensity within the brain parenchyma. There is indication of a hemorrhage in left frontal lobe. There is no other evidence of acute infarction, hemorrhage, hydrocephalus or extra-axial fluid collection. The pituitary gland, sella turcica and cavernous sinuses are unremarkable. The orbits, paranasal sinuses and mastoid air cells are clear.
 
 IMPRESSION: Normal MRI of the brain without contrast. Indication of a hemorrhage in left frontal lobe.
-```
-
-## Create a referral letter
-
-Write a referral letter to a specialist for a patient.
-
-```text
-Write a referral to Dr. simon.kos@hospital.com for 33 year old male asking to see this patient for review and management. Sx:CPOE and SOBOE 3 months. Typical
-PMHX:
-STEMI 2002. PCI LAD. HFREF
-CKD
-CVA
-AF on NOAC
-MEDS bicor, aspirin, statin, Rivaroxaban, entresto
-OE
-Well. High BMI. ECG NSR 80. BP 120/75
-well. Jvpne. Nil pedal edema
-HSDNM. Cheat clear
-Imp
-Stable.
-Plan
-Lifestyle. Diet.
-PHT clinic because why not
-```
-
-## Operation note generation with codes
-
-Generate a detailed operation note for a patient and include ICD-10 diagnosis codes inline.
-
-```text
-Generate an detailed operation note summary for a 44-year old female patient presenting with abdominal pain and undergoing a laparoscopic cholecystectomy and having no complications. The patient was discharged after 2 days. Include ICD-10 diagnosis codes inline.
 ```
