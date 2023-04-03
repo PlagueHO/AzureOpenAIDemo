@@ -7,7 +7,7 @@ This is an improved security risk classification that provides grounding (from A
 ```text
 Please classify the security risk for the following user situation into one of the following categories: [high security risk, medium security risk, low security risk]
 
-The situation concerns the user daniel@contoso.com, who is a IT administrator. The user has MFA enabled on thier account. The user's device is not currently compliant with Contoso device policy.
+The situation concerns the user daniel@contoso.com, who is a IT administrator. The user has MFA enabled on their account. The user's device is not currently compliant with Contoso device policy.
 
 Use the ISO 31000 risk management framework as a basis for classifying the risk.
 
