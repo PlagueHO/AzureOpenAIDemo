@@ -1,9 +1,9 @@
 # Azure OpenAI Service Prompt Example Library
 
 This is a library of example prompts for the Azure OpenAI Service. The prompts are organized by task type. The prompts are not intended to be used as-is, but rather as a starting point for your own prompts.
-
 ## Index by Use Case
 
+- [General techniques for prompt engineering](other/general-techniques.md)
 - [Security Risk Classification](security/security-risk-classification.md)
 - [Article Summarization for Social Media](media/article-summarization-for-social-media.md)
 - [Insurance Claim Conversation Extraction](insurance/insurance-claim-conversation-extraction.md)
