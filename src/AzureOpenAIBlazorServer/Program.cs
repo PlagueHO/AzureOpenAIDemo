@@ -1,6 +1,8 @@
 using AzureOpenAIBlazorServer.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.SemanticKernel;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,15 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddApplicationInsightsTelemetry();
+
+var kernel = Kernel.Builder.Build();
+kernel.Config.AddAzureOpenAITextCompletionService(
+    "davinci-azure",                                // Alias used by the kernel
+    "dsr-text-davinci-003",                         // Azure OpenAI *Deployment ID*
+    "https://dsr-openaidemo-oai.openai.azure.com/", // Azure OpenAI *Endpoint*
+    "...your Azure OpenAI Key..."                   // Azure OpenAI *Key*
+);
+builder.Services.AddSingleton(implementationInstance: kernel);
 
 var app = builder.Build();
 
