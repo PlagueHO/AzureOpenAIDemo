@@ -27,7 +27,7 @@ Extract the following from the conversation:
 
 ## Extract data in numbered list
 
-> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, TEXT-DAVINCI-003
+> Recommended models: TEXT-DAVINCI-003
 
 Extracts information from a phone conversation between an insurance agent and a customer into a numbered list.
 
@@ -47,7 +47,7 @@ Extract and number the following from the conversation:
 
 Extracts information from a phone conversation between an insurance agent and a customer into a JSON object that an application can read.
 
-> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, TEXT-DAVINCI-003
+> Recommended models: TEXT-DAVINCI-003
 
 ```text
 You must extract the following information from the phone conversation below:
@@ -69,7 +69,7 @@ Ok, is there any damage to your car? Yes, Headlights are broken and the airbags 
 
 ### Extract data in POCO format
 
-> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, TEXT-DAVINCI-003
+> Recommended models: TEXT-DAVINCI-003
 
 Extracts information from a phone conversation between an insurance agent and a customer.
 
