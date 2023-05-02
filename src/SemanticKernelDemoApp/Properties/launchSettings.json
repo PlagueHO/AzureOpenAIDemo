@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "SemanticKernelDemoApp": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development",
+        "AZURE_TENANT_ID": "16b3c013-d300-468d-ac64-7eda0820b6d3",
+        "AZURE_CLIENT_ID": "f23ef1c0-ffeb-4570-b873-25eeca2f3e2d",
+        "AZURE_CLIENT_SECRET": "daz8Q~WNnPVl-luxpcBMGA5c3h5Ruhtr-pbHKbCx"
+      }
+    }
+  }
+}
