@@ -8,13 +8,14 @@ using SemanticKernelDemoApp.Classes;
 using IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureAppConfiguration(async (hostingContext, configuration) =>
     {
+        #region Get Configuration
         configuration.Sources.Clear();
 
         IHostEnvironment env = hostingContext.HostingEnvironment;
 
         configuration
             .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-            .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional:true, reloadOnChange:true);
+            .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
 
         IConfigurationRoot configurationRoot = configuration.Build();
 
@@ -25,7 +26,9 @@ using IHost host = Host.CreateDefaultBuilder(args)
         AzureOpenAIServiceOptions azureOpenAIServiceChatCompletionOptions = new();
         configurationRoot.GetSection(nameof(azureOpenAIServiceChatCompletionOptions))
                          .Bind(azureOpenAIServiceChatCompletionOptions);
+        #endregion
 
+        #region Create the Semantic Kernel
         // Create the Semantic Kernel
         var kernel = Kernel.Builder.Build();
 
@@ -48,6 +51,9 @@ using IHost host = Host.CreateDefaultBuilder(args)
 
         // SemanticKernelExamples semanticKernelExamples = new SemanticKernelExamples(kernel);
 
+        #endregion
+
+        #region Semantic Kernel Example 1
         // Running prompts with input parameters (simple templating)
         Console.WriteLine("====================================");
         Console.WriteLine("Create a movie review data extractor");
@@ -94,7 +100,9 @@ using IHost host = Host.CreateDefaultBuilder(args)
         Console.WriteLine();
 
         // await semanticKernelExamples.MovieDataExtractorExampleAsync();
+        #endregion
 
+        #region Semantic Kernel Example 2
         // Prompt chaining (summarize then translate to maths)
         Console.WriteLine("===============================================================");
         Console.WriteLine("Summarize laws of thermodynamics and translate into mathematics");
@@ -131,7 +139,9 @@ using IHost host = Host.CreateDefaultBuilder(args)
         Console.WriteLine();
 
         // await semanticKernelExamples.SummarizeAndTranslateExampleAsync();
+        #endregion
 
+        #region Semantic Kernel Example 3
         // More prompt chaining (extract then translate Maori)
         Console.WriteLine("==================================================================================");
         Console.WriteLine("Extract financial information as a bullet pointed list and then translate to Maori");
@@ -168,6 +178,12 @@ using IHost host = Host.CreateDefaultBuilder(args)
         Console.WriteLine();
 
         // await semanticKernelExamples.ExtractAndTranslateExample();
+        #endregion
+
+
+
+
+
     })
     .Build();
 
