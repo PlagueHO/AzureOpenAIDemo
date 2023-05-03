@@ -66,7 +66,10 @@ using IHost host = Host.CreateDefaultBuilder(args)
             3. The director of the movie being reviewed. If it is not mentioned, please return ""unknown"" (key: Director).
             4. An array of actors/characters mentioned and thier acting performance as one of: [good, bad, terrible] (key: Actors).
 
-            Make sure the fields 1 to 4 are answered very short, e.g., for location just say the location name. Please answer in JSON machine-readable format, using the keys from above. Format the output as a JSON object called ""results"". Pretty print the JSON and make sure that it is properly closed at the end.
+            Make sure the fields 1 to 4 are answered very short.
+            Please answer in JSON machine-readable format, using the keys from above.
+            Format the output as a JSON object called ""results"".
+            Pretty print the JSON and make sure that it is properly closed at the end.
 
             ### Movie Review
             {{$input}}";
@@ -147,7 +150,9 @@ using IHost host = Host.CreateDefaultBuilder(args)
         Console.WriteLine("Extract financial information as a bullet pointed list and then translate to Maori");
         Console.WriteLine("==================================================================================");
 
-        string extractKeyPointsPrompt = @"Below is an extract from the annual financial report of a company. Extract key financial number (if present), key internal risk factors, and key external risk factors as a bullet pointed list.
+        string extractKeyPointsPrompt = @"Below is an extract from the annual financial report of a company.
+                Extract key financial number (if present), key internal risk factors, and key external risk
+                factors as a bullet pointed list.
 
                 ### Financial report
                 {{$input}}";

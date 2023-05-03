@@ -12,7 +12,30 @@ Generate clinical documentation.
 Write a referral letter to a specialist for a patient.
 
 ```text
-Write a referral to Dr. simon.kos@hospital.com for 33 year old male asking to see this patient for review and management. Sx:CPOE and SOBOE 3 months. Typical
+Write a referral to Dr. sam.smith@hospital.com for 33 year old male asking to see this patient for review and management.
+Sx:CPOE and SOBOE 3 months. Typical
+PMHX:
+STEMI 2002. PCI LAD. HFREF
+CKD
+CVA
+AF on NOAC
+MEDS bicor, aspirin, statin, Rivaroxaban, entresto
+OE
+Well. High BMI. ECG NSR 80. BP 120/75
+well. Jvpne. Nil pedal edema
+HSDNM. Cheat clear
+Imp
+Stable.
+Plan
+Lifestyle. Diet.
+PHT clinic because why not
+```
+
+Write a referral letter to a specialist for a patient where the Dr. prefers French.
+
+```text
+Write a referral to Dr. sam.smith@hospital.com for 33 year old male asking to see this patient for review and management. The Dr's preferred language is French.
+Sx:CPOE and SOBOE 3 months. Typical
 PMHX:
 STEMI 2002. PCI LAD. HFREF
 CKD
