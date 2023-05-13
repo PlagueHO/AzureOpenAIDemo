@@ -44,7 +44,7 @@ module openAiServiceBlazor './modules/openAiService.bicep' = {
   ]
   params: {
     location: location
-    openAiServiceName: '${baseResourceName}-openai'
+    openAiServiceName: '${baseResourceName}-oai'
     openAiModeldeployments: [{
       name: 'dsr-text-davinci-003'
       modelName: 'text-davinci-003'
@@ -102,40 +102,40 @@ module webAppBlazor './modules/webAppBlazor.bicep' = {
 var openAiResourceDeployments = [
   {
     location: 'EastUS'
-    name: 'aoaidemo1-eus'
+    name: 'eus1-oai'
   }
   {
     location: 'EastUS'
-    name: 'aoaidemo2-eus'
+    name: 'eus2-oai'
   }
   {
     location: 'EastUS'
-    name: 'aoaidemo3-eus'
+    name: 'eus3-oai'
   }
 
   {
     location: 'FranceCentral'
-    name: 'aoaidemo1-fc'
+    name: 'fc1-oai'
   }
   {
     location: 'FranceCentral'
-    name: 'aoaidemo2-fc'
+    name: 'fc2-oai'
   }
   {
     location: 'FranceCentral'
-    name: 'aoaidemo3-fc'
+    name: 'fc3-oai'
   }
   {
     location: 'WestEurope'
-    name: 'aoaidemo1-we'
+    name: 'we1-oai'
   }
   {
     location: 'WestEurope'
-    name: 'aoaidemo2-we'
+    name: 'we2-oai'
   }
   {
     location: 'WestEurope'
-    name: 'aoaidemo3-we'
+    name: 'we3-oai'
   }
 ]
 
