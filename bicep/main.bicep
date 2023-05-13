@@ -192,7 +192,6 @@ module openAiService './modules/openAiService.bicep' = [for (resource, i) in ope
   }
 }]
 
-
 output webAppName string = webAppBlazor.outputs.webAppName
 output webAppHostName  string = webAppBlazor.outputs.webAppHostName
 output webAppStagingName string = webAppBlazor.outputs.webAppStagingName
