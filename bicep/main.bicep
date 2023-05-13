@@ -114,19 +114,18 @@ var openAiResourceDeployments = [
     location: 'EastUS'
     name: 'eus3-oai'
   }
-
-  {
-    location: 'FranceCentral'
-    name: 'fc1-oai'
-  }
-  {
-    location: 'FranceCentral'
-    name: 'fc2-oai'
-  }
-  {
-    location: 'FranceCentral'
-    name: 'fc3-oai'
-  }
+  // {
+  //   location: 'FranceCentral'
+  //   name: 'fc1-oai'
+  // }
+  // {
+  //   location: 'FranceCentral'
+  //   name: 'fc2-oai'
+  // }
+  // {
+  //   location: 'FranceCentral'
+  //   name: 'fc3-oai'
+  // }
   {
     location: 'WestEurope'
     name: 'we1-oai'
@@ -142,6 +141,18 @@ var openAiResourceDeployments = [
 ]
 
 var openAiModelDeployments = [
+  // {
+  //   name: 'text-ada-001'
+  //   modelName: 'text-ada-001'
+  //   modelVersion: 1
+  //   scaleType: 'Standard'
+  // }
+  // {
+  //   name: 'text-curie-001'
+  //   modelName: 'text-curie-001'
+  //   modelVersion: '1'
+  //   scaleType: 'Standard'
+  // }
   {
     name: 'text-davinci-003'
     modelName: 'text-davinci-003'
