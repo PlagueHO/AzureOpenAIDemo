@@ -19,7 +19,7 @@ resource openAiService 'Microsoft.CognitiveServices/accounts@2022-12-01' = {
 
 // Loop through the list of models and create a deployment for each
 
-resource openAiServiceDeployment 'Microsoft.CognitiveServices/accounts/deployments@2022-12-01' = [for (model, i) in openAiModeldeployments:  {
+resource openAiServiceDeployment 'Microsoft.CognitiveServices/accounts/deployments@2022-12-01' = [for (model, i) in openAiModeldeployments: {
   parent: openAiService
   name: model.name
   properties: {
@@ -27,6 +27,9 @@ resource openAiServiceDeployment 'Microsoft.CognitiveServices/accounts/deploymen
       format: 'OpenAI'
       name: model.modelName
       version: model.modelVersion
+    }
+    scaleSettings: {
+      scaleType: model.scaleType
     }
   }
 }]

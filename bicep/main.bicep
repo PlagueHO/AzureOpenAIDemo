@@ -49,11 +49,13 @@ module openAiServiceBlazor './modules/openAiService.bicep' = {
       name: 'dsr-text-davinci-003'
       modelName: 'text-davinci-003'
       modelVersion: '1'
+      scaleType: 'Standard'
     }
     {
       name: 'dsr-gpt-35-turbo'
       modelName: 'gpt-35-turbo'
       modelVersion: '0301'
+      scaleType: 'Standard'
     }]
   }
 }
@@ -141,34 +143,28 @@ var openAiResourceDeployments = [
 
 var openAiModelDeployments = [
   {
-    name: 'text-ada-001'
-    modelName: 'text-ada-001'
-    modelVersion: 1
-  }
-  {
-    name: 'text-curie-001'
-    modelName: 'text-curie-001'
-    modelVersion: '1'
-  }
-  {
     name: 'text-davinci-003'
     modelName: 'text-davinci-003'
     modelVersion: '1'
+    scaleType: 'Standard'
   }
   {
     name: 'code-davinci-002'
     modelName: 'code-davinci-002'
     modelVersion: '1'
+    scaleType: 'Standard'
   }
   {
     name: 'text-embedding-ada-002'
     modelName: 'text-embedding-ada-002'
     modelVersion: '2'
+    scaleType: 'Standard'
   }
   {
     name: 'gpt-35-turbo'
     modelName: 'gpt-35-turbo'
     modelVersion: '0301'
+    scaleType: 'Standard'
   }
 ]
 
