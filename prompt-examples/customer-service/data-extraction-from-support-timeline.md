@@ -13,7 +13,7 @@ You must extract the following information from the customer support case timeli
 7. A short, yet detailed summary of the issue (key: issue_summary)
 8. The resolution of the issue, if any (key: resolution)
 
-Make sure the fields 1 to 6 are answered very short, e.g., for location just say the location name. Please answer in JSON machine-readable format, using the keys from above. Format the output as a JSON object called "results". Pretty print the JSON and make sure that it is properly closed at the end.
+Make sure the fields 1 to 8 are answered very short, e.g., for location just say the location name. Please answer in JSON machine-readable format, using the keys from above. Format the output as a JSON object called "results". Pretty print the JSON and make sure that it is properly closed at the end.
 
 Customer Service Case: Clothing Product Issue
 Customer Name: Jane Doe

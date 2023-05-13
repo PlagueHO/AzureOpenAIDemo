@@ -1,7 +1,9 @@
 targetScope = 'subscription'
 
-@description('The Azure App Service SKU for running the Blazor App.')
+@description('The location to deploy the main demo into.')
 @allowed([
+  'EastUS'
+  'FranceCentral'
   'SouthCentralUS'
   'WestEurope'
 ])
@@ -28,40 +30,32 @@ param baseResourceName string
 ])
 param appServicePlanConfiguration string = 'P1V2'
 
-@description('The model to deploy to the Open AI service.')
-@allowed([
-  'code-custman-001'
-  'code-search-ada-code-001'
-  'code-search-ada-text-001'
-  'code-search-babbage-code-001'
-  'code-search-babbage-text-001'
-  'text-ada-001'
-  'text-babbage-001'
-  'text-curie-001'
-  'text-davinci-001'
-  'text-davinci-002'
-  'text-davinci-003'
-  'text-embedding-ada-002'
-  'text-search-ada-doc-001'
-  'text-search-ada-query-001'
-  'text-search-babbage-doc-001'
-  'text-search-babbage-query-001'
-  'text-search-curie-doc-001'
-  'text-search-curie-query-001'
-  'text-search-davinci-doc-001'
-  'text-search-davinci-query-001'
-  'text-similarity-ada-001'
-  'text-similarity-babbage-001'
-  'text-similarity-curie-001'
-])
-param openAiModelName string = 'text-davinci-003'
-
-@description('The name of the deployment for the model  in the Open AI service.')
-param openAiDeploymentlName string = 'text-davinci-003'
-
 resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   name: resourceGroupName
   location: location
+}
+
+// OpenAI Resource required for Blazor App
+module openAiServiceBlazor './modules/openAiService.bicep' = {
+  name: 'openAiServiceBlazor'
+  scope: rg
+  dependsOn: [
+    monitoring
+  ]
+  params: {
+    location: location
+    openAiServiceName: '${baseResourceName}-openai'
+    openAiModeldeployments: [{
+      name: 'dsr-text-davinci-003'
+      modelName: 'text-davinci-003'
+      modelVersion: '1'
+    }
+    {
+      name: 'dsr-gpt-35-turbo'
+      modelName: 'gpt-35-turbo'
+      modelVersion: '0301'
+    }]
+  }
 }
 
 module monitoring './modules/monitoring.bicep' = {
@@ -71,20 +65,6 @@ module monitoring './modules/monitoring.bicep' = {
     location: location
     logAnalyticsWorkspaceName: '${baseResourceName}-law'
     applicationInsightsName: '${baseResourceName}-ai'
-  }
-}
-
-module openAiService './modules/openAiService.bicep' = {
-  name: 'openAiService'
-  scope: rg
-  dependsOn: [
-    monitoring
-  ]
-  params: {
-    location: location
-    openAiServiceName: '${baseResourceName}-openai'
-    modelName: openAiModelName
-    deploymentName: openAiDeploymentlName
   }
 }
 
@@ -113,15 +93,100 @@ module webAppBlazor './modules/webAppBlazor.bicep' = {
     location: location
     appServicePlanId: appServicePlan.outputs.appServicePlanId
     webAppName: baseResourceName
-    openAiEndpoint: '${openAiService.outputs.openAiServiceEndpoint}openai/${openAiService.outputs.openAiServiceDeployment}/'
     appInsightsInstrumentationKey: monitoring.outputs.applicationInsightsInstrumentationKey
     appInsightsConnectionString: monitoring.outputs.applicationInsightsConnectionString
   }
 }
 
+// Deploy OpenAI resources for each region
+var openAiResourceDeployments = [
+  {
+    location: 'FranceCentralUS'
+    name: 'aoaidemo1-fc'
+  }
+  {
+    location: 'FranceCentralUS'
+    name: 'aoaidemo2-fc'
+  }
+  {
+    location: 'FranceCentralUS'
+    name: 'aoaidemo3-fc'
+  }
+  {
+    location: 'SouthCentralUS'
+    name: 'aoaidemo1-sc'
+  }
+  {
+    location: 'SouthCentralUS'
+    name: 'aoaidemo2-sc'
+  }
+  {
+    location: 'SouthCentralUS'
+    name: 'aoaidemo3-sc'
+  }
+  {
+    location: 'WestEurope'
+    name: 'aoaidemo1-we'
+  }
+  {
+    location: 'WestEurope'
+    name: 'aoaidemo2-we'
+  }
+  {
+    location: 'WestEurope'
+    name: 'aoaidemo3-we'
+  }
+]
+
+var openAiModelDeployments = [
+  {
+    name: 'text-ada-001'
+    modelName: 'text-ada-001'
+    modelVersion: 1
+  }
+  {
+    name: 'text-curie-001'
+    modelName: 'text-curie-001'
+    modelVersion: '1'
+  }
+  {
+    name: 'text-davinci-003'
+    modelName: 'text-davinci-003'
+    modelVersion: '1'
+  }
+  {
+    name: 'code-davinci-002'
+    modelName: 'code-davinci-002'
+    modelVersion: '1'
+  }
+  {
+    name: 'text-embedding-ada-002'
+    modelName: 'text-embedding-ada-002'
+    modelVersion: '2'
+  }
+  {
+    name: 'gpt-35-turbo'
+    modelName: 'gpt-35-turbo'
+    modelVersion: '0301'
+  }
+]
+
+module openAiService './modules/openAiService.bicep' = [for (resource, i) in openAiResourceDeployments: {
+  name: 'openAiService${resource.name}'
+  scope: rg
+  dependsOn: [
+    monitoring
+  ]
+  params: {
+    location: resource.location
+    openAiServiceName: '${baseResourceName}-${resource.name}'
+    openAiModeldeployments: openAiModelDeployments
+  }
+}]
+
+
 output webAppName string = webAppBlazor.outputs.webAppName
 output webAppHostName  string = webAppBlazor.outputs.webAppHostName
 output webAppStagingName string = webAppBlazor.outputs.webAppStagingName
 output webAppStagingHostName  string = webAppBlazor.outputs.webAppStagingHostName
-output openAiServiceEndpoint string = openAiService.outputs.openAiServiceEndpoint
-output openAiServiceDeployment string = openAiService.outputs.openAiServiceDeployment
+output openAiServiceEndpoint string = openAiServiceBlazor.outputs.openAiServiceEndpoint

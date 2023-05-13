@@ -1,7 +1,6 @@
 param location string
 param appServicePlanId string
 param webAppName string
-param openAiEndpoint string
 param appInsightsInstrumentationKey string
 param appInsightsConnectionString string
 
@@ -51,10 +50,6 @@ resource webApp 'Microsoft.Web/sites@2021-01-15' = {
         {
           name: 'SnapshotDebugger_EXTENSION_VERSION'
           value: 'disabled'
-        }
-        {
-          name: 'OPENAI_ENDPOINT'
-          value: openAiEndpoint
         }
         {
           name: 'XDT_MicrosoftApplicationInsights_BaseExtensions'
@@ -131,10 +126,6 @@ resource WebAppStaging 'Microsoft.Web/sites/slots@2022-03-01' = {
         {
           name: 'SnapshotDebugger_EXTENSION_VERSION'
           value: 'disabled'
-        }
-        {
-          name: 'OPENAI_ENDPOINT'
-          value: openAiEndpoint
         }
         {
           name: 'XDT_MicrosoftApplicationInsights_BaseExtensions'

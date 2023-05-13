@@ -1,7 +1,6 @@
 param location string
 param openAiServiceName string
-param deploymentName string
-param modelName string
+param openAiModeldeployments array
 
 resource openAiService 'Microsoft.CognitiveServices/accounts@2022-12-01' = {
   name: openAiServiceName
@@ -18,20 +17,21 @@ resource openAiService 'Microsoft.CognitiveServices/accounts@2022-12-01' = {
   }
 }
 
-resource openAiServiceDeployment 'Microsoft.CognitiveServices/accounts/deployments@2022-12-01' = {
+// Loop through the list of models and create a deployment for each
+
+resource openAiServiceDeployment 'Microsoft.CognitiveServices/accounts/deployments@2022-12-01' = [for (model, i) in openAiModeldeployments:  {
   parent: openAiService
-  name: deploymentName
+  name: model.name
   properties: {
     model: {
       format: 'OpenAI'
-      name: modelName
-      version: '1'
+      name: model.modelName
+      version: model.modelVersion
     }
     scaleSettings: {
       scaleType: 'Standard'
     }
   }
-}
+}]
 
 output openAiServiceEndpoint string = openAiService.properties.endpoint
-output openAiServiceDeployment string = openAiServiceDeployment.properties.model.name
