@@ -30,6 +30,45 @@ param baseResourceName string
 ])
 param appServicePlanConfiguration string = 'P1V2'
 
+var openAiModelDeployments = [
+  // {
+  //   name: 'text-ada-001'
+  //   modelName: 'text-ada-001'
+  //   modelVersion: 1
+  //   scaleType: 'Standard'
+  // }
+  // {
+  //   name: 'text-curie-001'
+  //   modelName: 'text-curie-001'
+  //   modelVersion: '1'
+  //   scaleType: 'Standard'
+  // }
+  {
+    name: 'text-davinci-003'
+    modelName: 'text-davinci-003'
+    modelVersion: '1'
+    scaleType: 'Standard'
+  }
+  {
+    name: 'code-davinci-002'
+    modelName: 'code-davinci-002'
+    modelVersion: '1'
+    scaleType: 'Standard'
+  }
+  {
+    name: 'text-embedding-ada-002'
+    modelName: 'text-embedding-ada-002'
+    modelVersion: '2'
+    scaleType: 'Standard'
+  }
+  {
+    name: 'gpt-35-turbo'
+    modelName: 'gpt-35-turbo'
+    modelVersion: '0301'
+    scaleType: 'Standard'
+  }
+]
+
 resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   name: resourceGroupName
   location: location
@@ -45,18 +84,7 @@ module openAiServiceBlazor './modules/openAiService.bicep' = {
   params: {
     location: location
     openAiServiceName: '${baseResourceName}-oai'
-    openAiModeldeployments: [{
-      name: 'dsr-text-davinci-003'
-      modelName: 'text-davinci-003'
-      modelVersion: '1'
-      scaleType: 'Standard'
-    }
-    {
-      name: 'dsr-gpt-35-turbo'
-      modelName: 'gpt-35-turbo'
-      modelVersion: '0301'
-      scaleType: 'Standard'
-    }]
+    openAiModeldeployments: openAiModelDeployments
   }
 }
 
@@ -137,45 +165,6 @@ var openAiResourceDeployments = [
   {
     location: 'WestEurope'
     name: 'we3-oai'
-  }
-]
-
-var openAiModelDeployments = [
-  // {
-  //   name: 'text-ada-001'
-  //   modelName: 'text-ada-001'
-  //   modelVersion: 1
-  //   scaleType: 'Standard'
-  // }
-  // {
-  //   name: 'text-curie-001'
-  //   modelName: 'text-curie-001'
-  //   modelVersion: '1'
-  //   scaleType: 'Standard'
-  // }
-  {
-    name: 'text-davinci-003'
-    modelName: 'text-davinci-003'
-    modelVersion: '1'
-    scaleType: 'Standard'
-  }
-  {
-    name: 'code-davinci-002'
-    modelName: 'code-davinci-002'
-    modelVersion: '1'
-    scaleType: 'Standard'
-  }
-  {
-    name: 'text-embedding-ada-002'
-    modelName: 'text-embedding-ada-002'
-    modelVersion: '2'
-    scaleType: 'Standard'
-  }
-  {
-    name: 'gpt-35-turbo'
-    modelName: 'gpt-35-turbo'
-    modelVersion: '0301'
-    scaleType: 'Standard'
   }
 ]
 
