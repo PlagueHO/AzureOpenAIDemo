@@ -101,28 +101,29 @@ module webAppBlazor './modules/webAppBlazor.bicep' = {
 // Deploy OpenAI resources for each region
 var openAiResourceDeployments = [
   {
-    location: 'FranceCentralUS'
+    location: 'EastUS'
+    name: 'aoaidemo1-eus'
+  }
+  {
+    location: 'EastUS'
+    name: 'aoaidemo2-eus'
+  }
+  {
+    location: 'EastUS'
+    name: 'aoaidemo3-eus'
+  }
+
+  {
+    location: 'FranceCentral'
     name: 'aoaidemo1-fc'
   }
   {
-    location: 'FranceCentralUS'
+    location: 'FranceCentral'
     name: 'aoaidemo2-fc'
   }
   {
-    location: 'FranceCentralUS'
+    location: 'FranceCentral'
     name: 'aoaidemo3-fc'
-  }
-  {
-    location: 'SouthCentralUS'
-    name: 'aoaidemo1-sc'
-  }
-  {
-    location: 'SouthCentralUS'
-    name: 'aoaidemo2-sc'
-  }
-  {
-    location: 'SouthCentralUS'
-    name: 'aoaidemo3-sc'
   }
   {
     location: 'WestEurope'
