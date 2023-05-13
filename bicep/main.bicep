@@ -49,12 +49,12 @@ var openAiModelDeployments = [
     modelVersion: '1'
     scaleType: 'Standard'
   }
-  {
-    name: 'code-davinci-002'
-    modelName: 'code-davinci-002'
-    modelVersion: '1'
-    scaleType: 'Standard'
-  }
+  // {
+  //   name: 'code-davinci-002'
+  //   modelName: 'code-davinci-002'
+  //   modelVersion: '1'
+  //   scaleType: 'Standard'
+  // }
   {
     name: 'text-embedding-ada-002'
     modelName: 'text-embedding-ada-002'
