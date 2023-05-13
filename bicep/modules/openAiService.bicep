@@ -28,9 +28,6 @@ resource openAiServiceDeployment 'Microsoft.CognitiveServices/accounts/deploymen
       name: model.modelName
       version: model.modelVersion
     }
-    scaleSettings: {
-      scaleType: 'Standard'
-    }
   }
 }]
 
