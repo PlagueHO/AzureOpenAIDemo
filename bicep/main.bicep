@@ -141,11 +141,6 @@ var openAiResourceDeployments = [
 
 var openAiModelDeployments = [
   {
-    name: 'text-ada-001'
-    modelName: 'text-ada-001'
-    modelVersion: 1
-  }
-  {
     name: 'text-curie-001'
     modelName: 'text-curie-001'
     modelVersion: '1'
