@@ -31,6 +31,7 @@ This is a library of example prompts for the Azure OpenAI Service. The prompts a
 ### IT & Security
 
 - [Security Risk Classification](security/security-risk-classification.md)
+- [IT Operations](it-operations/it-operations.md)
 
 ### Health
 
