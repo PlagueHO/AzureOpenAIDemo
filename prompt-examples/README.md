@@ -34,12 +34,15 @@ This is a library of example prompts for the Azure OpenAI Service. The prompts a
 
 ### Health
 
+- [Health General Practitioner Referral](health/general-practitioner-referral-prompt-engineering.md)
+- [Health Hospital Referral](health/hospital-referral-prompt-engineering.md)
 - [Health Clinical Code Generation](health/clinical-code-generation.md)
 - [Health Clinical Documentation Generation](health/clinical-documentation-generation.md)
 
-### Insurance
+### Financial Services
 
-- [Insurance Claim Conversation Extraction](insurance/insurance-claim-conversaion-extraction.md)
+- [Financial Fraud Detection](financial/fraud-detection.md)
+- [Financial Insurance Claim Conversation Extraction](insurance/insurance-claim-conversaion-extraction.md)
 
 ### Media & Entertainment
 
