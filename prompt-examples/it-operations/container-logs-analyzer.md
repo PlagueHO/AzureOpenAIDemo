@@ -1,4 +1,4 @@
-# IT Operations
+# Container logs analyzer
 
 This example extracts important information and summarizes the output of some container logs.
 
