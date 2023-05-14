@@ -31,7 +31,6 @@ You are a medical AI assistant for applications at a general medical practice. Y
 Explain the following medical shorthand and what it means.
 
 ### Medical shorthand
-
 S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
 <|im_end|>
 <|im_start|>Assistant
@@ -43,7 +42,6 @@ S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tende
 Explain the following medical shorthand and what it means.
 
 ### Medical shorthand
-
 S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
 ```
 
@@ -61,7 +59,6 @@ You are a medical AI assistant for applications at a general medical practice. Y
 Output the meaning of the medical shorthand as JSON.
 
 ### Medical shorthand
-
 S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
 <|im_end|>
 <|im_start|>Assistant
@@ -73,7 +70,6 @@ S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tende
 Output the meaning of the medical shorthand as JSON.
 
 ### Medical shorthand
-
 S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
 ```
 
@@ -89,11 +85,8 @@ You are a medical AI assistant for applications at a general medical practice. Y
 <|im_end|>
 <|im_start|>User
 Explain the meaning of the medical shorthand and output as JSON.
-Medical Shorthand:
-S: 70 y/o pt c/o CP
-O: Pt appears uncomfortable, clutching chest. Vitals: BP 160/90, HR 110, RR 20, O2 sat 95% on RA. EKG shows ST elevations in leads II, III, and aVF.
-A: Suspected acute MI
-P: Administer aspirin, nitroglycerin, and morphine. Transfer to ED for further management.
+### Medical Shorthand
+S: 70 y/o pt c/o CP. O: Pt appears uncomfortable, clutching chest. Vitals: BP 160/90, HR 110, RR 20, O2 sat 95% on RA. EKG shows ST elevations in leads II, III, and aVF. A: Suspected acute MI. P: Administer aspirin, nitroglycerin, and morphine. Transfer to ED for further management.
 Response:
 <|im_end|>
 <|im_start|>Assistant
@@ -106,7 +99,7 @@ SOAP = {
 <|im_end|>
 <|im_start|>User
 Explain the meaning of the medical shorthand and output as JSON.
-Medical Shorthand:
+### Medical Shorthand
 S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
 <|im_end|>
 <|im_start|>Assistant
@@ -119,11 +112,8 @@ You are a medical AI assistant for applications at a general medical practice. Y
 
 ###
 Prompt: Explain the meaning of the medical shorthand and output as JSON.
-Medical Shorthand:
-S: 70 y/o pt c/o CP
-O: Pt appears uncomfortable, clutching chest. Vitals: BP 160/90, HR 110, RR 20, O2 sat 95% on RA. EKG shows ST elevations in leads II, III, and aVF.
-A: Suspected acute MI
-P: Administer aspirin, nitroglycerin, and morphine. Transfer to ED for further management.
+### Medical Shorthand
+S: 70 y/o pt c/o CP. O: Pt appears uncomfortable, clutching chest. Vitals: BP 160/90, HR 110, RR 20, O2 sat 95% on RA. EKG shows ST elevations in leads II, III, and aVF. A: Suspected acute MI. P: Administer aspirin, nitroglycerin, and morphine. Transfer to ED for further management.
 Response:
 SOAP = {
     "Subjective": "70 year old patient complains of chest pain.",
@@ -134,14 +124,66 @@ SOAP = {
 
 ###
 Prompt: Explain the meaning of the medical shorthand and output as JSON.
-Medical shorthand:
-
+### Medical shorthand
 S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
-
+Response:
 ```
 
 ## Create a Referral letter from the Medical Shorthand
 
+Create a referral letter to an unspecified hospital from the medical shorthand.
+
+> Using the GPT-35-TURBO or GPT-3 Models and ChatML
+
+```Text
+<|im_start|>System
+You are a medical AI assistant for applications at a general medical practice. You help produce professional documentation and make recommendations on documentation gaps.
+<|im_end|>
+<|im_start|>User
+Create a referral letter to the hospital from the medical shorthand.
+### Medical Shorthand
+S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
+<|im_end|>
+<|im_start|>Assistant
+```
+
+> Using the TEXT-DAVINCI-003
+
+```Text
+You are a medical AI assistant for applications at a general medical practice. You help produce professional documentation and make recommendations on documentation gaps.
+
+Create a referral letter to a hospital from the medical shorthand.
+### Medical shorthand
+S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
+```
+
+### Improve the Referral letter with Grounding
+
+Create a referral letter to a hospital from the medical shorthand, but include grounding information on the patient, the referring hospital and the referring doctor.
+
+> Using the GPT-35-TURBO or GPT-3 Models and ChatML
+
+```Text
+<|im_start|>System
+You are a medical AI assistant for applications at a general medical practice. You help produce professional documentation and make recommendations on documentation gaps.
+<|im_end|>
+<|im_start|>User
+Create a referral letter to the Fracture Clinic Team at Contoso Health from the medical shorthand. The patient is a 80 year-old male named Fred Smith. The referral letter is from Dr. Jenny Jones from Contoso Medical Center.
+### Medical Shorthand
+S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
+<|im_end|>
+<|im_start|>Assistant
+```
+
+> Using the TEXT-DAVINCI-003
+
+```Text
+You are a medical AI assistant for applications at a general medical practice. You help produce professional documentation and make recommendations on documentation gaps.
+
+Create a referral letter to the Fracture Clinic Team at Contoso Health from the medical shorthand. The patient is a 80 year-old male named Fred Smith. The referral letter is from Dr. Jenny Jones from Contoso Medical Center.
+### Medical shorthand
+S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
+```
 
 ## Define a plan to carry execute the skills
 
