@@ -3,7 +3,9 @@
 This example extracts important information and summarizes the output of some container logs.
 
 ```text
-Summarize the following container logs and identify any issues:
+Summarize the following container logs and identify any issues as a numbered list. Classify each issues as either "error", "security" or "performance".
+
+### Logs
 
 2023_04_14_10-30-0-7_docker.log:
 2023-04-14T00:00:07.771Z INFO - Waiting for response to warmup request for container dsrfoundryvtt2_0_63eb72dd. Elapsed time = 153.1738557 sec
@@ -16,7 +18,6 @@ Summarize the following container logs and identify any issues:
 2023-04-14T00:01:55.894Z INFO - Waiting for response to warmup request for container dsrfoundryvtt2_0_63eb72dd. Elapsed time = 261.2971196 sec
 2023-04-14T00:02:10.082Z INFO - Container dsrfoundryvtt2_0_63eb72dd for site dsrfoundryvtt2 initialized successfully and is ready to serve requests.
 2023-04-14T00:24:38.522Z INFO -
-
 2023_04_14_10-30-0-7_default_docker.log:
 2023-04-13T23:57:32.210135045Z Entrypoint | 2023-04-13 23:57:32 | Starting felddy/foundryvtt container v10.291.0
 2023-04-13T23:57:32.313050126Z Entrypoint | 2023-04-13 23:57:32 | No Foundry Virtual Tabletop installation detected.
@@ -72,4 +73,4 @@ Summarize the following container logs and identify any issues:
 2023-04-14T00:02:09.432843680Z FoundryVTT | 2023-04-14 00:02:09 |  Server started and listening on port 30000
 2023-04-14T00:02:10.065692375Z FoundryVTT | 2023-04-14 00:02:10 |  Created client session e19dd023e5a21f4c1260f9ec
 2023-04-14T01:45:59.585407509Z FoundryVTT | 2023-04-14 01:45:59 |  Created client session 36ccf52593534e31ef87245e
-``
+```
