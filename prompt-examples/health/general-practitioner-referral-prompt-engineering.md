@@ -43,7 +43,7 @@ S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tende
 
 Output the meaning of the medical shorthand as JSON.
 
-> Using the GPT-35-TURBO or GPT-3 Models and ChatML
+> Using the GPT-35-TURBO or GPT-4 Models and ChatML
 
 ```Text
 <|im_start|>System
@@ -67,11 +67,11 @@ Output the meaning of the medical shorthand as JSON.
 S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
 ```
 
-## Extract the medical shorthand as JSON
+## Extract the medical shorthand as JSON with one-shot example
 
 Output the meaning of the medical shorthand as JSON. The JSON format is not correct. Use a **one-shot** example to improve it.
 
-> Using the GPT-35-TURBO or GPT-3 Models and ChatML
+> Using the GPT-35-TURBO or GPT-4 Models and ChatML
 
 ```Text
 <|im_start|>System
@@ -133,7 +133,7 @@ Response:
 
 Convert the medical shorthand into a structured clinic note.
 
-> Using the GPT-35-TURBO or GPT-3 Models and ChatML
+> Using the GPT-35-TURBO or GPT-4 Models and ChatML
 
 ```Text
 <|im_start|>System
@@ -161,7 +161,7 @@ S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tende
 
 Create a referral letter to an unspecified hospital from the medical shorthand.
 
-> Using the GPT-35-TURBO or GPT-3 Models and ChatML
+> Using the GPT-35-TURBO or GPT-4 Models and ChatML
 
 ```Text
 <|im_start|>System
@@ -183,11 +183,11 @@ Create a referral letter to a hospital from the medical shorthand.
 S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
 ```
 
-### Improve the Referral letter with Grounding
+### Improve the Referral letter with Grounding or Metacontext
 
 Create a referral letter to a hospital from the medical shorthand, but include grounding information on the patient, the referring hospital and the referring doctor.
 
-> Using the GPT-35-TURBO or GPT-3 Models and ChatML
+> Using the GPT-35-TURBO or GPT-4 Models and ChatML
 
 ```Text
 <|im_start|>System
@@ -221,7 +221,7 @@ S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tende
 
 Create a list of additional clinical information that should be collected for this type of case.
 
-> Using the GPT-35-TURBO or GPT-3 Models and ChatML
+> Using the GPT-35-TURBO or GPT-4 Models and ChatML
 
 ```Text
 <|im_start|>System
@@ -251,7 +251,7 @@ Dr. Jenny Jones, Contoso Medical Center
 S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tender to palpation. ROM limited. No obvious deformity. A: Suspected R upper elbow fx. P: X-ray ordered. RICE, analgesics, sling for immobilization. Ref to Fracture Clinic.
 ```
 
-## Define a plan to carry execute the skills
+## Define a plan to achieve the goal of referring the patient
 
 Orchestrators like Semantic Kernel show their full power when being used to build and execute plans based on a goal.
 
