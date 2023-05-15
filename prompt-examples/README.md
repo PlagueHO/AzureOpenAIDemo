@@ -49,3 +49,7 @@ This is a library of example prompts for the Azure OpenAI Service. The prompts a
 
 - [Article Summarization for Social Media](media/article-summarization-for-social-media.md)
 - [Extract Movie Name and Sentiment from Movie Review](media/movie-review-sentiment-classification.md)
+
+### Retail
+
+- [Retail recommender](retail/recommender.md)

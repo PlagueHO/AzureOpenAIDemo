@@ -1,8 +1,10 @@
 # Bookstore assistant
 
-> Recommended models: GPT-35-TURBO
+> Recommended models: GPT-35-TURBO, GPT-4
 
 These examples show a retail assistant for a book store.
+
+Important: Recommenders need access to the latest products available in the store. Relying on the training data in the model to only recommend relevant material will not work well as they will only recommend older products. The recommender needs to be able to access the latest products available in the store, which would need to be provided via grounding the prompt with relevant products based on a semantic index (using Embeddings).
 
 - [Generalized assistant](#generalized-assistant)
 - [Personalized assistant](#personalized-assistant)
