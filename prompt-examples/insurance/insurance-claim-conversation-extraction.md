@@ -72,10 +72,31 @@ Ok, is there any damage to your car? Yes, Headlights are broken and the airbags 
 
 ### Generate a follow-up letter
 
+> Recommended models: TEXT-DAVINCI-003
+
 Generate a follow-up letter from a phone conversation between an insurance agent and a customer.
 
 ```text
 Generate a follow-up letter to the customer from the following phone conversation, and include a summary of the accident and policy number. If a tow truck or tow van was called, please also include this.
+
+### Conversation
+Hi There, I just had a car accident and wanted to report it. OK, I hope you’re alright and in a safe place to have this conversation. Yes, I’m fine thank you. Can you please describe to me what happened? I was driving on the M23 and I hit another car. Are you OK? Yeah, I’m just a little shaken up. That’s understandable. Can you give me your full name? Sure, it’s Sarah Standl. Do you know what caused the accident? I think I might have hit a pothole. OK, where did the accident take place? On the M23 near junction 10. Was anyone else injured? I don’t think so. But I’m not sure. OK, well we’ll need to do an investigation. Can you give me the other drivers information? Sure, his name is John Radley. And your insurance policy number. OK. Give me a minute. OK, it’s 546452.
+Ok, is there any damage to your car? Yes, Headlights are broken and the airbags went off. Are you going to be able to drive it? I don’t think so. I’m going to have to have it towed. Well, we’ll need to get it inspected. I’ll go ahead and order you a tow van. I’ll also start the claim and we’ll get everything sorted out. Thank you.
+```
+
+### Generate a follow-up letter with recent history and suggestions
+
+> Recommended models: TEXT-DAVINCI-003
+
+```text
+Generate a follow-up letter to the customer from the following phone conversation, and include a summary of the accident and policy number. If a tow truck or tow van was called, please also include this.
+
+Politely and helpfully include any driving improvement recommendations based on the customer history.
+
+### Customer history
+2020-05-05: Collision with delivery van while backing. No injuries. Minor damage to rear fender.
+2021-06-03: Collision with power pole while backing. No injuries. Minor damage to rear fender.
+2022-08-29: Collision with garage while backing. No injuries. Minor damage to rear fender.
 
 ### Conversation
 Hi There, I just had a car accident and wanted to report it. OK, I hope you’re alright and in a safe place to have this conversation. Yes, I’m fine thank you. Can you please describe to me what happened? I was driving on the M23 and I hit another car. Are you OK? Yeah, I’m just a little shaken up. That’s understandable. Can you give me your full name? Sure, it’s Sarah Standl. Do you know what caused the accident? I think I might have hit a pothole. OK, where did the accident take place? On the M23 near junction 10. Was anyone else injured? I don’t think so. But I’m not sure. OK, well we’ll need to do an investigation. Can you give me the other drivers information? Sure, his name is John Radley. And your insurance policy number. OK. Give me a minute. OK, it’s 546452.

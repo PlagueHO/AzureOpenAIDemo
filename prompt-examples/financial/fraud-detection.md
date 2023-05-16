@@ -50,7 +50,7 @@ This example takes a list of recent transactions from bank statement and returns
 You are a financial AI assistant that helps identify bank transactions that might be fraudulent.
 <|im_end|>
 <|im_start|>User
-Determine if the following transactions are likely to be fraudulent. You must provide the following information for each transaction below:
+Determine if the following transactions are likely to be fraudulent. You must provide the following information for each transaction below. The date format is in DD/MM/YYYY:
 
 1. Transaction date (key: date, format: YYYY-MM-DD)
 2. Description (key: description)
@@ -63,6 +63,7 @@ Please answer in JSON machine-readable format, using the keys from above. Format
 ### Transactions
 02/07/2023 Rent -$1,200
 03/07/2023 Rent -$1,200
+04/07/2023 R3nt -$1,200
 03/07/2023 Groceries -$490
 
 ### Recent bank statement
@@ -82,7 +83,6 @@ Date Description Amount
 13/05/2023 Interest earned +$5
 02/06/2023 Rent -$1,200
 05/05/2023 Groceries -$180
-
 <|im_end|>
 <|im_start|>Assistant
 ```
