@@ -9,6 +9,7 @@ param appServicePlanName string
   'P1V2'
   'P2V2'
   'P3V2'
+  'P0V3'
   'P1V3'
   'P2V3'
   'P3V3'

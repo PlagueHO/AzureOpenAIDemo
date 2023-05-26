@@ -24,6 +24,7 @@ param baseResourceName string
   'P1V2'
   'P2V2'
   'P3V2'
+  'P0V3'
   'P1V3'
   'P2V3'
   'P3V3'
@@ -142,18 +143,6 @@ var openAiResourceDeployments = [
     location: 'EastUS'
     name: 'eus3-oai'
   }
-  // {
-  //   location: 'FranceCentral'
-  //   name: 'fc1-oai'
-  // }
-  // {
-  //   location: 'FranceCentral'
-  //   name: 'fc2-oai'
-  // }
-  // {
-  //   location: 'FranceCentral'
-  //   name: 'fc3-oai'
-  // }
   {
     location: 'WestEurope'
     name: 'we1-oai'
