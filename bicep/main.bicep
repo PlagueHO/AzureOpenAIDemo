@@ -140,20 +140,12 @@ var openAiResourceDeployments = [
     name: 'eus2-oai'
   }
   {
-    location: 'EastUS'
-    name: 'eus3-oai'
-  }
-  {
     location: 'WestEurope'
     name: 'we1-oai'
   }
   {
     location: 'WestEurope'
     name: 'we2-oai'
-  }
-  {
-    location: 'WestEurope'
-    name: 'we3-oai'
   }
 ]
 
