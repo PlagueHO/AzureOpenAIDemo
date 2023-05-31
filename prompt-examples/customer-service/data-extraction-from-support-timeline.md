@@ -36,7 +36,7 @@ Case Number: 987654321
 - Jan 15, 2023: Customer returned the jacket using the prepaid return label. Return tracking number was updated on agent's system.
 - Jan 18, 2023: Agent received confirmation that the jacket was delivered back to warehouse. Agent processed exchange order for blue denim jacket (size L) and shipped it via UPS with tracking number. Exchange order confirmation email was sent to customer.
 - Jan 23, 2023: Customer received exchange order and found that jacket fit well and had no defects. Customer contacted customer service via email and thanked them for resolving their issue quickly and satisfactorily.
-- Jan 24, 2023: Agent replied to customer's email and thanked them for their feedback. Agent also asked customer to rate their experience on a scale of one to five stars.```
+- Jan 24, 2023: Agent replied to customer's email and thanked them for their feedback. Agent also asked customer to rate their experience on a scale of one to five stars.
 ```
 
 > Recommended models: GPT-35-TURBO, GPT-4
@@ -77,7 +77,7 @@ Case Number: 987654321
 - Jan 15, 2023: Customer returned the jacket using the prepaid return label. Return tracking number was updated on agent's system.
 - Jan 18, 2023: Agent received confirmation that the jacket was delivered back to warehouse. Agent processed exchange order for blue denim jacket (size L) and shipped it via UPS with tracking number. Exchange order confirmation email was sent to customer.
 - Jan 23, 2023: Customer received exchange order and found that jacket fit well and had no defects. Customer contacted customer service via email and thanked them for resolving their issue quickly and satisfactorily.
-- Jan 24, 2023: Agent replied to customer's email and thanked them for their feedback. Agent also asked customer to rate their experience on a scale of one to five stars.```
+- Jan 24, 2023: Agent replied to customer's email and thanked them for their feedback. Agent also asked customer to rate their experience on a scale of one to five stars.
 <|im_end|>
 <|im_start|>Assistant
 ```
