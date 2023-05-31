@@ -9,6 +9,7 @@ This is a library of example prompts for the Azure OpenAI Service. The prompts a
 - [Insurance Claim Conversation Extraction](insurance/insurance-claim-conversation-extraction.md)
 - [Customer Service Response Generation](customer-service/response-generation.md)
 - [Customer Service product issue timeline data extraction](customer-service/data-extraction-from-support-timeline.md)
+- [Customer Service product issue create letter](customer-service/create-letter-from-support-timeline.md)
 - [Customer Service interview follow-up questions](customer-service/interview-followup.md)
 - [Simple Code Generation](code-generation/simple-code-generation.md)
 - [Health Clinical Code Generation](health/clinical-code-generation.md)
@@ -23,6 +24,7 @@ This is a library of example prompts for the Azure OpenAI Service. The prompts a
 - [Customer Service Response Generation](customer-service/response-generation.md)
 - [Customer Service product issue timeline data extraction](customer-service/data-extraction-from-support-timeline.md)
 - [Customer Service interview follow-up questions](customer-service/interview-followup.md)
+- [Customer Service product issue create letter](customer-service/create-letter-from-support-timeline.md)
 
 ### Software
 
