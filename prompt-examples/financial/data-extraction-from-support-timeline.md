@@ -14,7 +14,9 @@ You must extract the following information from the customer support case timeli
 5. The resolution of the issue, if any (key: resolution)
 6. An array of improvements that can be made to avoid this issue in future (key: improvements)
 7. How many days did it take to resolve the issue (key: days_to_resolve)
-8. What is the reputational risk to the bank (key: reputational_risk)
+8. What is the risk to the organization, measured against the ISO 31000 risk management framework (key: risk)
+9. Describe the risk in detail using the ISO 31000 framework (key: risk_detail)
+10. What information should also be collected to improve determination of risk (key: missing_information)
 
 Make sure the fields are very short. Ensure any abbreviations are expanded. Please answer in JSON machine-readable format, using the keys from above. Pretty print the JSON and make sure that it is properly closed at the end.
 
@@ -63,7 +65,9 @@ You must extract the following information from the customer support case timeli
 5. The resolution of the issue, if any (key: resolution)
 6. An array of improvements that can be made to avoid this issue in future (key: improvements)
 7. How many days did it take to resolve the issue (key: days_to_resolve)
-8. What is the reputational risk to the bank (key: reputational_risk)
+8. What is the risk to the organization, measured against the ISO 31000 risk management framework (key: risk)
+9. Describe the risk in detail using the ISO 31000 framework (key: risk_detail)
+10. What information should also be collected to improve determination of risk (key: missing_information)
 
 Make sure the fields are very short. Ensure any abbreviations are expanded. Please answer in JSON machine-readable format, using the keys from above. Pretty print the JSON and make sure that it is properly closed at the end.
 
