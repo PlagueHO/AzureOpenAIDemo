@@ -46,6 +46,7 @@ This is a library of example prompts for the Azure OpenAI Service. The prompts a
 
 - [Financial Fraud Detection](financial/fraud-detection.md)
 - [Financial Insurance Claim Conversation Extraction](insurance/insurance-claim-conversaion-extraction.md)
+- [Customer Service mortgage issue timeline data extraction](financial/data-extraction-from-support-timeline.md)
 
 ### Media & Entertainment
 
