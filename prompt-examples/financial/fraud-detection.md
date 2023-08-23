@@ -98,7 +98,7 @@ This example takes a list of recent transactions from bank statement and returns
 You are a financial AI assistant that helps identify bank transactions that might be fraudulent.
 <|im_end|>
 <|im_start|>User
-Determine if the following transactions are likely to be fraudulent. The date format is in DD/MM/YYYY. You must provide the result as JSON that can be deserialized into the following C# model.
+Determine if the following transactions are likely to be fraudulent. The date format is in DD/MM/YYYY. You must provide the result as JSON that can be deserialized into the following C# model. Do not output any other content except the JSON.
 
 ### Model
 
