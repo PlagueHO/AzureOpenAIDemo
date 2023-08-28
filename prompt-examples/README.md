@@ -59,4 +59,6 @@ This is a library of example prompts for the Azure OpenAI Service. The prompts a
 
 ### Transport & Logistics
 
-- [Driver assistant](transport-logistics/transport-logistics.md)
+- [Driver assistant](transport-logistics/transport-logistics.md#driver-assistant)
+- [Personalized driver podcast](transport-logistics/transport-logistics.md#personalized-driver-podcast)
+-
