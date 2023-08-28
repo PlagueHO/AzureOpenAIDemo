@@ -56,3 +56,7 @@ This is a library of example prompts for the Azure OpenAI Service. The prompts a
 ### Retail
 
 - [Retail recommender](retail/recommender.md)
+
+### Transport & Logistics
+
+- [Driver assistant](transport-logistics/transport-logistics.md)

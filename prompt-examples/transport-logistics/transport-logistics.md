@@ -13,7 +13,7 @@ This prompt makes 10 driver recommendations based on vehicle maintenance, previo
 You are an AI assistant that helps a transportation & logistics heavy vehicle driver make informed decisions about their daily driving jobs. Drivers typically drive heavy vehicles, performing one or more jobs per day.
 <|im_end|>
 <|im_start|>User
-Provide a list of 10 recommendations on improvements to the driver that they should consider based on the vehicle maintainence, previous routes, weather and traffic incidents below. For each recommendation, provide your thoughts that made you suggest this and the data you used to make the suggestion. You will make recommendations that the driver can follow.
+Provide a list of 10 recommendations on improvements to the driver that they should consider based on the vehicle maintainence, previous routes, weather and traffic incidents below. For each recommendation, provide your thoughts that made you suggest this and the data you used to make the suggestion. You will make recommendations that the driver can follow. You will only make suggestions that is backed up by the data provided below.
 
 ### Jobs planned today
 job_id,pick_up,drop_off,route,weight
