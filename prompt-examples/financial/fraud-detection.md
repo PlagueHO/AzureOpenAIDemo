@@ -159,3 +159,41 @@ Date Description Amount
 <|im_end|>
 <|im_start|>Assistant
 ```
+
+### Evaluate fraud possibility as a single sentence output
+
+This example takes a list of recent transactions from bank statement and returns the likelihood if any of them are fraudulent. It outputs a single sentence for each transaction.
+
+> Recommended models: GPT-4, GPT-35-TURBO
+
+```text
+Determine if the following transactions are likely to be fraudulent. You must evaluate the fraud possibility for each transaction below, considering the customer information. The date format is in DD/MM/YYYY. Please provide a single sentence description containing the transaction date, description, amount, fraud chance (as a %) and reason you think it is fraudulent.
+
+### Customer
+Lives in: New Zealand
+Household: 2 Adults
+
+### Transactions
+02/07/2023 Rent -$1,200
+03/07/2023 Rent -$1,200
+04/07/2023 R3nt -$1,200
+03/07/2023 Groceries -$490
+
+### Recent bank statement
+Date Description Amount
+01/05/2023 Salary +$5,000
+02/05/2023 Rent -$1,200
+03/05/2023 Groceries -$150
+04/05/2023 Gas -$50
+05/05/2023 Netflix -$15
+06/05/2023 Coffee -$5
+07/05/2023 Transfer to savings -$500
+08/05/2023 ATM withdrawal -$100
+09/05/2023 Restaurant -$80
+10/05/2023 Phone bill -$40
+11/05/2023 Gym membership -$30
+12/05/2023 Online shopping -$120
+13/05/2023 Interest earned +$5
+02/06/2023 Rent -$1,200
+05/05/2023 Groceries -$180
+```
