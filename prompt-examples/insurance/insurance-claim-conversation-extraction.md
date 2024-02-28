@@ -8,7 +8,7 @@
 
 ## Extract data in list
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 Extracts information from a phone conversation between an insurance agent and a customer in a list.
 
@@ -28,7 +28,7 @@ Ok, is there any damage to your car? Yes, Headlights are broken and the airbags 
 
 ## Extract data in numbered list
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 Extracts information from a phone conversation between an insurance agent and a customer into a numbered list.
 
@@ -50,7 +50,7 @@ Ok, is there any damage to your car? Yes, Headlights are broken and the airbags 
 
 Extracts information from a phone conversation between an insurance agent and a customer into a JSON object that an application can read.
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 You must extract the following information from the conversation below:
@@ -72,7 +72,7 @@ Ok, is there any damage to your car? Yes, Headlights are broken and the airbags 
 
 ### Generate a follow-up letter
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 Generate a follow-up letter from a phone conversation between an insurance agent and a customer.
 
@@ -86,7 +86,7 @@ Ok, is there any damage to your car? Yes, Headlights are broken and the airbags 
 
 ### Generate a follow-up letter with recent history and suggestions
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 Generate a follow-up letter to the customer from the following phone conversation, and include a summary of the accident and policy number. If a tow truck or tow van was called, please also include this.

@@ -2,7 +2,7 @@
 
 Create a followup letter to a customer from a timeline summary of events. Include relevant information from the complains policy.
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 You must create a follow up letter to the customer summarizing the support case from timeline below. The letter will be formal and written in a professional tone. It will summarize the timeline of events and conclude with the outcome. The letter should be short and concise, but detailed enough to address the customer's concerns. Include any relevant content from the Complaints Policy.

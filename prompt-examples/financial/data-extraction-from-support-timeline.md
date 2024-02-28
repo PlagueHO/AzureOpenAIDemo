@@ -2,7 +2,7 @@
 
 Extract data from a support timeline summary of events to create a structured data set.
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 You must extract the following information from the customer support case timeline below:

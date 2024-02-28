@@ -1,6 +1,6 @@
 # Clinical code generation
 
-> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, TEXT-DAVINCI-003
+> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, GPT-35-TURBO
 
 Generate clinical/medical codes from clinical text documentation.
 
@@ -129,7 +129,7 @@ The base of the appendix was fulgurated to remove any remaining glands. The area
 
 ## Radiology note code generation
 
-> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, TEXT-DAVINCI-003
+> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, GPT-35-TURBO
 > Recommended parameters: temperature=0.0, top_p=0.9
 
 Generate a JSON object with the following fields from a radiology note.

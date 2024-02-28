@@ -4,7 +4,7 @@ Classify a free text issue description into one of the following categories: [Lo
 
 This is an improved security risk classification that provides grounding (from Azure AD on the user and their devices), a bases the risk on the ISO 31000 risk management framework, and provides a more granular classification of the risk. It also provides few-shot training.
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 Please classify the security risk for the following user situation into one of the following categories: [Low, Medium, High]
@@ -35,7 +35,7 @@ Prompt: I have deployed an Azure App Service that hosts a web site. The App Serv
 Security Risk:
 ```
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 Add an extreme risk, explanation and remediation.
 

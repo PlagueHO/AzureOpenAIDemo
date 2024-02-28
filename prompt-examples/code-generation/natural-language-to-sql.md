@@ -21,7 +21,7 @@ Cushman is powerful, yet fast. While Davinci is stronger when it comes to analyz
 Learn more about the Codex models [here]( 
 https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models#codex-models).
 
-> Recommended model: Use either of the ones listed above. If for any reason you don't have access to the codex models, you can fall back to text-davinci-003.
+> Recommended model: Use either of the ones listed above. If for any reason you don't have access to the codex models, you can fall back to GPT-35-TURBO.
 
 ## Examples
 

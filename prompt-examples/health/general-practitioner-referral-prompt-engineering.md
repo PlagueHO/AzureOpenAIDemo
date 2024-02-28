@@ -127,7 +127,7 @@ S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tende
 <|im_start|>Assistant
 ```
 
-> Using the TEXT-DAVINCI-003
+> Using the GPT-35-TURBO
 
 ```Text
 Explain the following medical shorthand and what it means.
@@ -155,7 +155,7 @@ S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tende
 <|im_start|>Assistant
 ```
 
-> Using the TEXT-DAVINCI-003
+> Using the GPT-35-TURBO
 
 ```Text
 Output the meaning of the medical shorthand as JSON.
@@ -199,7 +199,7 @@ S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tende
 <|im_start|>Assistant
 ```
 
-> Using the TEXT-DAVINCI-003
+> Using the GPT-35-TURBO
 
 ```Text
 You are a medical AI assistant for applications at a general medical practice. You help produce professional documentation and make recommendations on documentation gaps.
@@ -245,7 +245,7 @@ S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tende
 <|im_start|>Assistant
 ```
 
-> Using the TEXT-DAVINCI-003
+> Using the GPT-35-TURBO
 
 ```Text
 Convert the medical shorthand below into a structured clinic note for storage in the patient's electronic medical record. You will expand any abbreviations. The plan will be expanded into a numbered list of actions. You will include relevant ICD-10-AM diagnosis codes in the assessment section.
@@ -272,7 +272,7 @@ S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tende
 <|im_start|>Assistant
 ```
 
-> Using the TEXT-DAVINCI-003
+> Using the GPT-35-TURBO
 
 ```Text
 Create a referral letter to a hospital from the medical shorthand.
@@ -302,7 +302,7 @@ S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tende
 <|im_start|>Assistant
 ```
 
-> Using the TEXT-DAVINCI-003
+> Using the GPT-35-TURBO
 
 ```Text
 Create a referral letter to the Fracture Clinic Team at Contoso Health from the medical shorthand. The patient is a 80 year-old male named Fred Smith. The referral letter is from Dr. Jenny Jones from Contoso Medical Center.
@@ -336,7 +336,7 @@ S: Pt c/o pain in R elbow after fall. Hx of HTN, T2DM. O: R elbow swollen, tende
 <|im_start|>Assistant
 ```
 
-> Using the TEXT-DAVINCI-003
+> Using the GPT-35-TURBO
 
 ```Text
 Provide a list of recommended and relevant clinical information that is not mentioned in the medical shorthand below that should be collected for this type of case.

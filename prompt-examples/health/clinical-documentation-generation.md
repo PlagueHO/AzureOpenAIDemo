@@ -1,6 +1,6 @@
 # Clinical documentation generation
 
-> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, TEXT-DAVINCI-003
+> Recommended models: TEXT-DAVINCI-001, TEXT-DAVINCI-002, GPT-35-TURBO
 
 Generate clinical documentation.
 

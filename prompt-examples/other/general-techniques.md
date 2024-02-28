@@ -6,7 +6,7 @@ This section defines some general techniques and patterns to address common prob
 
 Custom Named Entities with few-shot examples.
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 Extract job titles from the following sentences.
@@ -25,7 +25,7 @@ Sentence: Damien is the CTO of Platform.sh, he was previously the CTO of Commerc
 
 Multi-Label Text Classification with few-shot examples.
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 The following is a list of movies and the categories they fall into:
@@ -42,7 +42,7 @@ Category: 
 
 Paraphrasing with few-Shot examples.
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 Article: Searching a specific search tree for a binary key can be programmed recursively or iteratively.
@@ -59,7 +59,7 @@ Article: Google was founded in 1998 by Larry Page and Sergey Brin while they wer
 
 Keyword Extraction with one-shot example
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 Information Retrieval (IR) is the process of obtaining resources relevant to the information need. For instance, a search query on a web search engine can be an information need. The search engine can return web pages that represent relevant resources.
@@ -77,7 +77,7 @@ Keywords:
 
 Keyword Extraction as JSON array one-shot example
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 Information Retrieval (IR) is the process of obtaining resources relevant to the information need. For instance, a search query on a web search engine can be an information need. The search engine can return web pages that represent relevant resources.
@@ -96,7 +96,7 @@ Keywords:
 
 Question and answering with zero-shot
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 On Monday, Microsoft launched an OpenAI service as part of its Azure cloud platform, offering businesses and start-ups the ability to incorporate models like ChatGPT into their own systems. The company has already been building AI tools into many of its consumer products, such as a DALL-E 2 feature in its Bing search engine that can create images based on a text prompt, and the Information reported recently that it’s working to bring more of them to Microsoft Office as well.
@@ -108,7 +108,7 @@ What will Microsoft incorporate in its own systems?
 
 Contact Center Summarization
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 Summarize this for a call center agent:
@@ -124,7 +124,7 @@ Agent: Certain aspects of payroll processing are regulated by the Internal Reven
 
 Insert or suggest missing content in numbered list
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 These are agenda topics for a customer presentation.
@@ -138,7 +138,7 @@ These are agenda topics for a customer presentation.
 
 Intent classification with few-shot examples
 
-> Recommended models: TEXT-DAVINCI-003, TEXT-BABBAGE-001
+> Recommended models: GPT-35-TURBO, TEXT-BABBAGE-001
 
 ```text
 listen to WestBam album allergic on google music: PlayMusic
@@ -151,7 +151,7 @@ I want to book a flight to Delhi:
 
 ## Chatbot with personality
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 This is a discussion between a [human] and a [robot].
@@ -173,7 +173,7 @@ The [robot] is very nice and empathetic.
 
 Classify this text for use by bot routing with few-shot examples
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 Message: When the spaceship landed on Mars, the whole humanity was excited
@@ -196,7 +196,7 @@ Topic:
 
 Summarize a transcript with zero-shot example
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 Summarize this conversation transcript:
@@ -208,7 +208,7 @@ Agent: Thank you for calling ADM. Who am I am speaking to? Customer: Hello, my n
 
 Product description and ad generation with few-shot example
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 Generate a product description out of keywords.
@@ -233,7 +233,7 @@ Sentence:
 
 Product recommendation with few-shot example
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 ```text
 Generate product recommendations:

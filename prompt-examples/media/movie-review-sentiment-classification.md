@@ -1,6 +1,6 @@
 # Classify the sentiment of a movie review
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 Extract the name of a movie from a movie review and generate a sentiment classification for the review.
 
@@ -17,7 +17,7 @@ A person might argue that once you’ve figured out how to download a person’s
 the experience's sum total of felt life. But then, there is more than one way to see this particular movie, so your mileage may vary.
 ```
 
-> Recommended models: TEXT-DAVINCI-003
+> Recommended models: GPT-35-TURBO
 
 Extract the name of a movie from a movie review and generate a sentiment classification for the review as JSON.
 

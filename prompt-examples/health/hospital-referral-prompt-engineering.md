@@ -78,7 +78,7 @@ Contoso Medical Center.
 <|im_start|>Assistant
 ```
 
-> Using the TEXT-DAVINCI-003
+> Using the GPT-35-TURBO
 
 ```Text
 You are a medical AI assistant for applications at Contoso Health hospital. You help produce the fracture clinic team prepare for weekly clinics by preparing relevant documentation, summaries and recommendations.
@@ -162,7 +162,7 @@ February 1, 2002. Facial trauma from a fall. Facial reconstruction
 <|im_start|>Assistant
 ```
 
-> Using the TEXT-DAVINCI-003
+> Using the GPT-35-TURBO
 
 ```Text
 You are a medical AI assistant for applications at Contoso Health hospital. You help produce the fracture clinic team prepare for weekly clinics by preparing relevant documentation, summaries and recommendations.
